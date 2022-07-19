@@ -1,0 +1,52 @@
+---
+permalink: reference-requirements-for-creating-a-dataset.html 
+sidebar: sidebar 
+keywords: specific, requirement, create, dataset, protect, data, host, cluster, snapmanager, hyper-v 
+summary: Wenn Datensätze erstellt werden sollen, um die Daten zu sichern, müssen bestimmte Anforderungen erfüllt werden. 
+---
+= Anforderungen für das Erstellen eines Datensatzes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Datensätze erstellt werden sollen, um die Daten zu sichern, müssen bestimmte Anforderungen erfüllt werden. Sie müssen zuerst den Host oder Host-Cluster zu SnapManager für Hyper-V hinzufügen und dann dem Host- oder Host-Cluster Virtual Machines hinzufügen.
+
+
+
+== Name und Beschreibung des Datensatzes
+
+Bei der Benennung des Datensatzes sollten Sie eine Namenskonvention an Ihrem Standort verwenden, um Administratoren dabei zu unterstützen, Datensätze zu finden und zu identifizieren, die auf die folgenden Zeichen beschränkt sind:
+
+* Von A bis z
+* Von A bis Z
+* 0 bis 9
+* _ (Unterstrich)
+* - (Bindestrich)
+
+
+
+
+== Datensatz-Ressourcen
+
+Sie müssen den Host oder Host Cluster zu SnapManager für Hyper-V hinzufügen, bevor Sie dem Datensatz Ressourcen wie Virtual Machines hinzufügen.
+
+Sie können einem Datensatz Hosts, dedizierte Virtual Machines oder gemeinsam genutzte Virtual Machines hinzufügen. Wenn Sie einen Host hinzufügen, fügen Sie alle virtuellen Maschinen hinzu, die zum Host gehören. Sie können auch Virtual Machines hinzufügen, die zu unterschiedlichen Hosts gehören. Virtual Machines können zu mehreren Datensätzen gehören.
+
+
+NOTE: Dedizierte und gemeinsam genutzte Virtual Machines, die zum selben Host-Cluster gehören, sollten nicht im gleichen Datensatz vorhanden sein. Wenn Sie diese Arten von Ressourcen zu einem einzelnen Datensatz hinzufügen, kann dies zum Versagen der Datensatz-Sicherung führen.
+
+
+
+== Virtual Machines und ONTAP LUNs
+
+Alle Dateien, die mit Virtual Machines verknüpft sind, einschließlich Konfigurationsdateien, Snapshot Kopien und VHDs, müssen auf ONTAP LUNs gespeichert sein.
+
+
+
+== Verbrauch von Datensatz-Ressourcen
+
+Es kann jederzeit nur ein applikationskonsistenter Backup-Vorgang auf einem Host durchgeführt werden. Wenn dieselben Virtual Machines zu unterschiedlichen Datensätzen gehören, sollten Sie keine applikationskonsistente Backups der Datensätze gleichzeitig planen. Wenn dies geschieht, schlägt einer der Backup-Vorgänge fehl.
+
+Wählen Sie beim Erstellen eines Datensatzes alle virtuellen Maschinen aus, die sich auf einer bestimmten ONTAP-LUN befinden. Dies ermöglicht Ihnen, alle Backups in einer Snapshot-Kopie zu erhalten und den Speicherplatzbedarf im Storage-System zu reduzieren.

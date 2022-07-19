@@ -1,0 +1,25 @@
+---
+permalink: reference-backup-reports-use-management-console-time-zone-information-in-report-name.html 
+sidebar: sidebar 
+keywords: backup, report, use, management, console, time, zone, information, report, name 
+summary: Backup-Berichte verwenden Zeitzoneninformationen der Managementkonsole im Berichtsnamen. 
+---
+= Backup-Berichte verwenden Zeitzoneninformationen der Managementkonsole im Berichtsnamen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Wenn Sie einen Backup-Bericht mit einem Client-Host generieren, der sich in einer anderen Zeitzone als dem übergeordneten Host befindet, verwendet der Berichtsname die Zeitzoneninformationen des Client-Hosts, und der Berichtinhalt verwendet die übergeordnete Host-Zeitzone.
+
+* *Ursache*
++
+Der Zeitstempel im Backup-Berichtsnamen wird mit den Zeitzoneninformationen des Client-Hosts angezeigt.
+
+* *Korrekturmaßnahmen*
++
+Es ist keine Korrekturmaßnahme erforderlich.
+
+

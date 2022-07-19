@@ -1,0 +1,38 @@
+---
+permalink: task-manually-backing-up-a-dataset.html 
+sidebar: sidebar 
+keywords: create, on-demand, backup, dataset, back, up, manual 
+summary: Ein On-Demand-Backup eines Datensatzes ist möglich. 
+---
+= Manuelles Backup eines Datensatzes
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ein On-Demand-Backup eines Datensatzes ist möglich.
+
+Sie müssen die folgenden Informationen zur Verfügung haben:
+
+* Name und Beschreibung der Sicherung
+* Richtlinienname, falls erforderlich
+* Informationen über Richtlinien überschreiben (wenn Sie eine der zuvor angegebenen Richtlinienoptionen ändern möchten)
+* Backup-Typ
+* Informationen zu Backup-Optionen
+
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Datensätze].
+. Wählen Sie den Datensatz aus, für den Sie ein manuelles Backup erstellen möchten, und klicken Sie auf *Backup*.
++
+Der Assistent *Backup* wird angezeigt.
+
+. Führen Sie die Schritte im Assistenten aus, um Ihr On-Demand Backup zu erstellen.
++
+Durch das Schließen des Assistenten wird das Backup bei Bedarf nicht abgebrochen.
+
+
+
+Sie können den Status der On-Demand-Sicherung im Fenster Jobverwaltung anzeigen.

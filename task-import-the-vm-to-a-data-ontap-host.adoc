@@ -1,0 +1,41 @@
+---
+permalink: task-import-the-vm-to-a-data-ontap-host.html 
+sidebar: sidebar 
+keywords: export, virtual, machine, vm, import, ontap, host 
+summary: 'Nachdem Sie eine virtuelle Maschine \(VM\) exportiert haben, können Sie sie in einen ONTAP-Host importieren.' 
+---
+= Importieren einer VM auf einen ONTAP Host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie eine Virtual Machine (VM) exportiert haben, können Sie sie in einen ONTAP Host importieren.
+
+Die VM muss aus dem nicht-ONTAP Host exportiert worden sein.
+
+. Klicken Sie im linken Fensterbereich mit der rechten Maustaste auf den Namen des ONTAP-Hosts, in den Sie die VM importieren möchten.
+. Wählen Sie *virtuelle Maschine importieren*.
++
+image::../media/smhv_import_vm_in_servermanager.gif[smhv importiert die vm in Servermanager]
+
++
+Das Fenster Virtuelle Maschine importieren wird geöffnet.
+
+. Klicken Sie Auf *Durchsuchen*.
+. Klicken Sie auf den Namen des Hosts, zu dem Sie die VM früher exportiert haben, und klicken Sie dann auf *Ordner auswählen*.
+. Wählen Sie unter Importeinstellungen *Virtuelle Maschine kopieren [neue eindeutige ID erstellen]* aus.
+. Klicken Sie Auf *Import*.
+. Überprüfen Sie, ob die VM erfolgreich importiert wurde, und löschen Sie die VM vom nicht-ONTAP-Host.
+. Aktualisieren Sie speziell für Hyper-V 2016 die Konfigurationsversion von 5.0 auf 8.0.
++
+.. Klicken Sie im rechten Fensterbereich mit der rechten Maustaste auf den Namen der VM, die Sie aktualisieren möchten.
+.. Wählen Sie *Upgrade Configuration Version*.
++
+Die Konfigurationsversion für die VM wird auf 8.0 aktualisiert.
+
+
+
+. Starten Sie die VM.
+

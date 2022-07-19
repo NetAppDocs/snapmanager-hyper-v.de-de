@@ -1,0 +1,25 @@
+---
+permalink: reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html 
+sidebar: sidebar 
+keywords: require, hotfix, kb2263829, install, platform 
+summary: Der erforderliche Hotfix KB2263829 kann auf einigen Plattformen nicht installiert werden. 
+---
+= Der erforderliche Hotfix KB2263829 kann auf einigen Plattformen nicht installiert werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Bei der Installation von SnapManager für Hyper-V kann der Versuch, den Hotfix KB2263829 zu installieren, bei Windows Server 2008 R2 SP1 fehlschlagen. Das Installationsprogramm gibt an, dass der Hotfix für diesen Server nicht anwendbar ist.
+
+* *Ursache*
++
+Der Hotfix wird für Ihre Plattform nicht unterstützt.
+
+* *Korrekturmaßnahmen*
++
+Öffnen Sie einen Support-Fall bei Microsoft und beheben Sie das Problem mit Microsoft.
+
+

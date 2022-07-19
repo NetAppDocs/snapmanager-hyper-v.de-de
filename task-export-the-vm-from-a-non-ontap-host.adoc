@@ -1,0 +1,40 @@
+---
+permalink: task-export-the-vm-from-a-non-ontap-host.html 
+sidebar: sidebar 
+keywords: export, virtual, machine, vm, non-ontap, host, import 
+summary: 'Sie müssen zuerst eine virtuelle Maschine \ (VM\) von einem nicht-ONTAP-Host exportieren, bevor Sie sie auf einen ONTAP-Host importieren können.' 
+---
+= Exportieren Sie die VM von einem Host ohne ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie müssen zuerst eine Virtual Machine (VM) von einem nicht-ONTAP Host exportieren, bevor Sie sie auf einen ONTAP Host importieren können.
+
+Die VM, die Sie migrieren möchten, muss ausgeschaltet sein.
+
+. Öffnen Sie den Application Server Manager.
+. Klicken Sie im linken Fensterbereich auf *Rollen* > *Hyper-V* > *Hyper-V Manager*.
+. Wählen Sie den Namen des nicht-ONTAP Hosts aus, auf dem sich die VM, die Sie migrieren möchten, momentan befindet.
+. Klicken Sie im Bereich Virtual Machines mit der rechten Maustaste auf den Namen der VM, die Sie migrieren möchten.
+. Klicken Sie Auf *Exportieren*.
++
+image::../media/smhv_export_vm_in_servermanager.gif[smhv Export-vm in Servermanager]
+
++
+Das Fenster Virtuelle Maschine exportieren wird geöffnet.
+
+. Klicken Sie Auf *Durchsuchen*.
++
+Es öffnet sich ein Fenster, in dem die verfügbaren Festplatten angezeigt werden.
+
+. Klicken Sie auf das ONTAP-Host-Ziel für die VM.
+. Klicken Sie Auf *Ordner Auswählen*.
++
+Die VM wird in Schritt 7 zum Data ONTAP Ziel exportiert, das Sie ausgewählt haben.
+
+
+
+Importieren Sie dann die VM auf den ausgewählten Data ONTAP-Host.

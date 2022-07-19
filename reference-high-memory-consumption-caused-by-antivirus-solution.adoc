@@ -1,0 +1,25 @@
+---
+permalink: reference-high-memory-consumption-caused-by-antivirus-solution.html 
+sidebar: sidebar 
+keywords: high, memeory, consumption, cause, antivirus, solution 
+summary: Hoher Speicherverbrauch durch Antivirenlösung. 
+---
+= Hoher Speicherverbrauch durch Antivirenlösung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Virenschutzlösungen auf Dateiebene können zu einem hohen Speicherverbrauch führen, was zu einem Speicherleck führen kann.
+
+* *Ursache*
++
+Unter bestimmten Bedingungen belegt SnapManager für Hyper-V möglicherweise eine große und ständig wachsende Menge an Speicher, da eine falsch konfigurierte Virenschutzlösung die VM-Konfigurationsdateien scannt. Wenn eine Antivirus-Lösung die VM-Konfigurationsdateien scannt, wird ein _InstanceModificationEvent angezeigt, das die Änderungen beschreibt. Wenn SnapManager for Hyper-V diese Benachrichtigung erhält, wird eine Aufzählung von Storage und VMs mit SnapDrive für Windows ausgelöst. In einigen Fällen können diese Ereignisse so schnell auftreten, dass sie von SnapDrive für Windows nicht verarbeitet werden können, wodurch SnapManager für Hyper-V in eine Warteschlange gestellt wird.
+
+* *Korrekturmaßnahmen*
++
+Schließen Sie die Scans von VM-Dateien der SnapManager für Hyper-V von der Virenschutzlösung aus.
+
+

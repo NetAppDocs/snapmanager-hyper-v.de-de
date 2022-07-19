@@ -1,0 +1,22 @@
+---
+permalink: concept-report-path-settings.html 
+sidebar: sidebar 
+keywords: configure, report, path, setting, store, snapmanager, hyper-v, operation, configure, virtual, machine, dataset 
+summary: Sie können Berichtspfadeinstellungen so konfigurieren, dass Sie Berichte für SnapManager für Hyper-V Vorgänge speichern können. Sie müssen die Einstellungen für den Berichtspfad konfigurieren, bevor Sie einem Datensatz Ressourcen für virtuelle Maschinen hinzufügen können. 
+---
+= Einstellungen für Berichtspfade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Berichtspfadeinstellungen so konfigurieren, dass Sie Berichte für SnapManager für Hyper-V Vorgänge speichern können. Sie müssen die Einstellungen für den Berichtspfad konfigurieren, bevor Sie einem Datensatz Ressourcen für virtuelle Maschinen hinzufügen können.
+
+Wenn die Berichtseinstellungen nicht konfiguriert sind, wenn ein übergeordnetes Hyper-V-Host zu SnapManager für Hyper-V hinzugefügt wird, können Sie diese Einstellungen später mit dem Konfigurationsassistenten konfigurieren (und sogar ändern).
+
+Wenn Sie die Einstellungen für den Berichtspfadpfad für ein übergeordnetes Hostcluster konfigurieren, müssen Sie manuell das Berichtverzeichnis auf jedem Clusterknoten erstellen. Der Berichtspfad sollte sich nicht auf einem gemeinsam genutzten Cluster-Volume (CSV) oder einer gemeinsamen LUN befinden.
+
+*Verwandte Informationen*
+
+http://technet.microsoft.com/library/jj612868.aspx["Microsoft TechNet: Verwenden Sie Cluster Shared Volumes in einem Failover Cluster"]

@@ -1,0 +1,113 @@
+---
+permalink: reference-requirements-for-adding-policies-to-a-dataset.html 
+sidebar: sidebar 
+keywords: specific, requirement, apply, policies, policy, backup, restore, function, multiple, retention, replication, dataset 
+summary: Wenn Richtlinien auf Datensätze für Backup- oder Wiederherstellungsfunktionen angewendet werden sollen, müssen bestimmte Anforderungen erfüllt werden. Demselben Datensatz können mehrere Richtlinien für Aufbewahrung, Planung und Replizierung hinzugefügt werden. 
+---
+= Anforderungen für das Hinzufügen von Richtlinien zu einem Datensatz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Richtlinien auf Datensätze für Backup- oder Wiederherstellungsfunktionen angewendet werden sollen, müssen bestimmte Anforderungen erfüllt werden. Demselben Datensatz können mehrere Richtlinien für Aufbewahrung, Planung und Replizierung hinzugefügt werden.
+
+
+
+== Name und Beschreibung der Richtlinie
+
+Name und Beschreibung der Richtlinie, beschränkt auf die folgenden Zeichen:
+
+* Von A bis z
+* Von A bis Z
+* 0 bis 9
+* _ (Unterstrich)
+* - (Bindestrich)
+
+
+
+
+== Grenzwerte für die Backup-Aufbewahrung
+
+Sie müssen die Mindestdauer festlegen, während die Backup-Kopien stündlich, täglich, wöchentlich oder monatlich aufbewahrt werden sollen, bevor sie gelöscht werden.
+
+
+NOTE: Backups mit einem Aufbewahrungstyp von „`Unlimited`“ werden nicht gelöscht.
+
+Sie können Backups entweder auf Basis einer bestimmten Zeit oder einer bestimmten Zahl aufbewahren. So können Sie beispielsweise die 10 aktuellen Backups aufbewahren oder Backups löschen, die älter als 15 Tage sind.
+
+Wenn Ihr System alte Backups enthält, sollten Sie Ihre Aufbewahrungsrichtlinien prüfen. Alle Objekte, die gesichert werden, die sich eine Snapshot Kopie teilen, müssen die Backup-Löschkriterien für die Aufbewahrungsrichtlinie erfüllen, um das Entfernen einer Snapshot Kopie auszulösen.
+
+
+
+== Name des geplanten Backup-Jobs
+
+Sie müssen dem geplanten Backupjob einen Namen zuweisen.
+
+
+
+== Berechtigung zum Planen von Backups
+
+Sie müssen über die entsprechenden Zugangsdaten verfügen, um Datensatzsicherungen zu planen.
+
+
+
+== Anzahl der möglichen Datensätze, die gleichzeitig für ein Backup geplant sind
+
+Wenn dieselben Virtual Machines zu unterschiedlichen Datensätzen gehören, sollten Sie kein Backup mit mehr als einem Datensatz, der zur gleichen VM enthält, gleichzeitig planen. Wenn dies geschieht, schlägt einer der Backup-Vorgänge fehl. Es kann immer nur ein Backup-Vorgang auf einem Host erfolgen.
+
+
+
+== Typ des geplanten Backups
+
+Sie können entweder eine applikationskonsistente oder ein absturzkonsistentes Backup durchführen.
+
+
+
+== Backup-Optionen
+
+Sie müssen auswählen, ob Sie den SnapMirror-Zielstandort aktualisieren möchten, nachdem der Backup abgeschlossen ist.
+
+Das Update ist nur erfolgreich, wenn Sie bereits SnapMirror konfiguriert haben und wenn die LUNs, die die virtuellen Maschinen im Datensatz enthalten, zum SnapMirror Quell-Volume gehören.
+
+Das Standardverhalten von SnapManager für Hyper-V besteht darin, ein Backup zu scheitern, wenn eine oder mehrere virtuelle Maschinen nicht online gesichert werden können. Wenn eine virtuelle Maschine den Status „gespeichert“ oder „heruntergefahren“ aufweist, können Sie kein Online-Backup durchführen. In einigen Fällen befinden sich virtuelle Maschinen im abgespeicherten Zustand oder werden zu Wartungszwecken heruntergefahren, aber Backups müssen trotzdem fortgesetzt werden, selbst wenn ein Online-Backup nicht möglich ist. Dazu können Sie die Virtual Machines, die sich im gespeicherten Zustand befinden, verschieben oder zu einem anderen Datensatz mit einer Richtlinie herunterfahren, die Backups des gespeicherten Status ermöglicht.
+
+Sie können auch das Kontrollkästchen Sichern des gespeicherten Status der VM zulassen aktivieren, damit SnapManager für Hyper-V die virtuelle Maschine im Status „gespeichert“ sichern kann. Wenn Sie diese Option auswählen, schlägt SnapManager für Hyper-V das Backup nicht fehl, wenn der Hyper-V VSS Writer die virtuelle Maschine im gespeicherten Zustand sichert oder eine Offline-Sicherung der virtuellen Maschine durchführt. Die Durchführung eines gespeicherten Status- oder Offline-Backups kann zu Ausfallzeiten führen.
+
+Der `distributed application-consistent backup` Diese Funktion ermöglicht die Konsistenz mehrerer VMs, die auf den Partner-Cluster-Nodes ausgeführt werden, in einer einzigen Snapshot-Hardware-Kopie, die vom Backup-Node aus erstellt wurde. Diese Funktion wird bei allen VMs unterstützt, die auf einem Windows-Volume mit CSV 2.0 über mehrere Knoten in einem Windows Failover Cluster ausgeführt werden. Um diese Funktion zu verwenden, wählen Sie die aus `Application-consistent` Sicherungstyp und aktivieren Sie das Kontrollkästchen *Distributed Backup* aktivieren.
+
+
+
+== Sekundärer Storage in einem SnapMirror Backup
+
+Mit diesen Optionen akzeptieren Sie Optionen, die sich auf einen sekundären Storage beziehen, der in einer SnapMirror-Beziehung definiert ist. Hier können Sie *Update SnapMirror nach Backup* wählen. Im Optionsfenster Vault-Bezeichnung können Sie *SnapVault nach Backup aktualisieren* auswählen. Wenn Sie *SnapVault nach Backup* aktualisieren auswählen, müssen Sie im Dropdown-Menü eine Tresorbeschriftung auswählen oder eine benutzerdefinierte Bezeichnung eingeben.
+
+
+
+== Backup-Skripte
+
+Sie müssen entscheiden, ob die optionalen Sicherungsskripte vor oder nach dem Backup ausgeführt werden sollen.
+
+Diese Skripte werden auf allen Hosts der Datensatzmitglieder ausgeführt, es sei denn, Sie geben einen bestimmten Server an.
+
+Auf jedem Knoten des Datensatzes werden Backup-Skripte ausgeführt. Sie können die Datensatzrichtlinie so festlegen, dass der Name des Hosts angegeben wird, auf dem die Skripte ausgeführt werden sollen. Die Richtlinie wird auf jedem Node im Cluster verarbeitet, auf dem die zu sichernde VM ausgeführt wird.
+
+image::smhv_policywizard_specified_host.gif[der smhv-Richtlinieassistent hat den angegebenen Host angegeben]
+
+Sie können die folgenden Umgebungsvariablen in Argumenten für Backup Postscripts verwenden:
+
+* * VMSnapshot*: Gibt den Namen der Snapshot Kopie an, die auf dem Storage-System als Ergebnis dieses Backups erstellt wird. Wenn Sie applikationskonsistente Backups in ONTAP Umgebungen mit 7-Mode erstellen, ist dies der Name der zweiten Snapshot Kopie (Backup). Der erste Name ist mit dem zweiten Namen identisch, jedoch ohne das Suffix _Backup.
+* *€nliche SnapInfoName*: Gibt den Zeitstempel an, der im SnapInfo-Verzeichnisnamen verwendet wird.
+* *€nliche SnapInfoSnapshot*: Gibt den Namen der SnapInfo Snapshot Kopie an, die auf dem Storage-System erstellt wurde. SnapManager für Hyper-V erstellt eine Snapshot Kopie der SnapInfo-LUN am Ende des Datensatz-Backup-Vorgangs.
++
+
+NOTE: Die Variable *€nliche SnapInfoSnapshot* wird nur für dedizierte virtuelle Maschinen unterstützt.
+
+
+
+*Verwandte Informationen*
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet: Hyper-V"]
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-buvault/home.html["ONTAP 9 Volume Backup mit SnapVault Express Guide"]

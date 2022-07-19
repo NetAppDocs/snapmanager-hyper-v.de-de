@@ -1,0 +1,23 @@
+---
+permalink: task-view-a-hyper-v-parent-host-or-host-cluster.html 
+sidebar: sidebar 
+keywords: view, configuration, information, specific, hyper-v, parent, host, cluster, monitor, status 
+summary: Sie können Konfigurationsinformationen zu einem bestimmten übergeordneten Hyper-V Host oder Host-Cluster anzeigen, sodass Sie dessen Status überwachen können. 
+---
+= Zeigen Sie einen übergeordneten Hyper-V-Host oder einen Host-Cluster an
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Konfigurationsinformationen zu einem bestimmten übergeordneten Hyper-V Host oder Host-Cluster anzeigen, sodass Sie dessen Status überwachen können.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Hosts].
+. Wählen Sie den Host oder Host-Cluster aus, den Sie anzeigen möchten.
++
+Im Fenster Details werden der Host- oder Host-Cluster-Name, die Domäne, die Clustermitglieder (falls zutreffend) und die Konfigurationsmeldungen angezeigt. Wenn Sie einen nicht konfigurierten Host auswählen, werden im Fenster Details Informationen zu nicht konfigurierten Hosts angezeigt.
+
+

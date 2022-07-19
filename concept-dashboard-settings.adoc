@@ -1,0 +1,45 @@
+---
+permalink: concept-dashboard-settings.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, dashboard, overview, resource, protect, job, resource, history, setting 
+summary: Das Dashboard von SnapManager für Hyper-V zeigt eine Übersicht über die Ressourcen an, die aktuell geschützt werden, und die, die nicht geschützt sind. Sie können verschiedene Segmente des Kreisdiagramms zum VM-Schutzstatus oder des Balkendiagramms für den Jobverlauf auswählen, um allgemeine Informationen zum Status Ihrer Jobs, Ressourcen und Historie anzuzeigen. 
+---
+= Dashboard-Einstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Das Dashboard von SnapManager für Hyper-V zeigt eine Übersicht über die Ressourcen an, die aktuell geschützt werden, und die, die nicht geschützt sind. Sie können verschiedene Segmente des Kreisdiagramms zum VM-Schutzstatus oder des Balkendiagramms für den Jobverlauf auswählen, um allgemeine Informationen zum Status Ihrer Jobs, Ressourcen und Historie anzuzeigen.
+
+image::smhv_dashboard.gif[smhv-Konsole]
+
+* *VM-Schutzstatus*
++
+Wenn Sie im Kreisdiagramm VM Protection Status ein Segment auswählen, können Sie im Bereich Details Informationen zum Schutzstatus der virtuellen Maschinen anzeigen. Die Beschreibungen für gültige Werte lauten wie folgt:
+
++
+** *OK*
++
+Zeigt das letzte erfolgreiche Backup aller virtuellen Maschinen an.
+
+** *Fehlgeschlagen*
++
+Zeigt das zuletzt fehlgeschlagene Backup jeder virtuellen Maschine an.
+
+** *Ungeschützt*
++
+Zeigt die virtuellen Maschinen an, die nicht zu Datensätzen gehören und somit ungeschützt sind.
+
+
+
+* *Jobverlauf*
++
+Wenn Sie ein Segment im Balkendiagramm für die Jobhistorie auswählen, können Sie im Bereich Details den Verlauf der abgeschlossenen, fehlgeschlagenen und ausgeführten Jobs über einen bestimmten Zeitraum anzeigen. Sie können die Dauer ändern, die die Jobdetails im Balkendiagramm der Jobhistorie angezeigt werden. Der Standardwert ist sieben Tage.
+
+* *Aktualisieren konfigurieren*
++
+Sie können mit der Schaltfläche *Configure Refresh* ändern, wie oft das Dashboard die angezeigten Informationen aktualisiert. Der Standardwert ist 10 Minuten.
+
+

@@ -1,0 +1,32 @@
+---
+permalink: reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html 
+sidebar: sidebar 
+keywords: dataset, automatic, replicated, node, windows, failover, cluster 
+summary: Datensätze werden nicht automatisch auf neue Knoten in einem Windows Failover Cluster repliziert. 
+---
+= Datensätze werden nicht automatisch auf neue Knoten in einem Windows Failover Cluster repliziert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Nach dem Hinzufügen neuer Knoten zu einem Windows Failover Cluster werden Datensätze nicht automatisch auf den neuen Knoten übertragen.
+
+* *Ursache*
++
+Beim Hinzufügen neuer Knoten zu einem Windows Failover Cluster repliziert SnapManager für Hyper-V die vorhandenen Datensätze nicht automatisch auf die neuen Knoten im Cluster.
+
+* *Korrekturmaßnahmen*
++
+Führen Sie den Änderungsdatensatz-Assistenten aus und klicken Sie auf der Seite „Basisdetails“ auf *Terminierungsrichtlinien für alle Datensatzknoten aktualisieren*.
+
++
+Dieser Assistent muss für jeden Datensatz mit Virtual Machines ausgeführt werden.
+
+
+
+*Verwandte Informationen*
+
+xref:task-modify-a-dataset.adoc[Ändern eines Datensatzes]

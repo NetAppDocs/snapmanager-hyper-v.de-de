@@ -1,0 +1,24 @@
+---
+permalink: task-modify-a-dataset.html 
+sidebar: sidebar 
+keywords: create, dataset, modify, description, resource, associate 
+summary: Nachdem Sie einen Datensatz erstellt haben, können Sie die Datensatzbeschreibung und die dem Datensatz zugeordneten Ressourcen ändern. 
+---
+= Ändern eines Datensatzes
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie einen Datensatz erstellt haben, können Sie die Datensatzbeschreibung und die dem Datensatz zugeordneten Ressourcen ändern.
+
+Das Kontrollkästchen Datensatz validieren ist standardmäßig aktiviert. SnapManager für Hyper-V überprüft während der Erstellung oder Änderung eines Datensatzes auf Konfigurationsfehler in allen VMs. Sie müssen sicherstellen, dass das Kontrollkästchen nicht aktiviert ist, wenn Sie die Validierung des Datensatzes nicht aktivieren möchten.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Datensätze].
+. Wählen Sie den Datensatz aus, den Sie ändern möchten.
+. Klicken Sie im Aktionsbereich auf *Datensatz ändern*.
+. Führen Sie die Schritte im Assistenten aus.
+

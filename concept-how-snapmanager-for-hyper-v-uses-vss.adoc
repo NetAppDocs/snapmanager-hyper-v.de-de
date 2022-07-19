@@ -1,0 +1,23 @@
+---
+permalink: concept-how-snapmanager-for-hyper-v-uses-vss.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, integration, microsoft, hyper-v, volume, shadow, copy, service, vss, quiesce, virtual, machine, vm, snapshot 
+summary: 'SnapManager für Hyper-V bietet die Integration in den Microsoft Hyper-V Volume Shadow Copy Service (VSS) Writer, um eine Virtual Machine (VM) stillzulegen, bevor eine applikationskonsistente Snapshot Kopie der VM erstellt wird.' 
+---
+= Wie SnapManager für Hyper-V VSS verwendet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager für Hyper-V bietet die Integration in den Microsoft Hyper-V Volume Shadow Copy Service (VSS) Writer, um eine Virtual Machine (VM) stillzulegen, bevor eine applikationskonsistente Snapshot Kopie der VM erstellt wird.
+
+SnapManager für Hyper-V ist ein VSS Requestor und koordiniert den Backup-Vorgang zur Erstellung einer konsistenten Snapshot Kopie. Dabei wird VSS Hardware Provider für Data ONTAP für Hyper-V VMs verwendet, die auf SAN ausgeführt werden, und der Remote VSS Provider für Hyper-V VMs, die auf SMB 3.0 Share ausgeführt werden.
+
+Mit SnapManager für Hyper-V können Sie applikationskonsistente Backups einer VM erstellen, wenn Sie über Microsoft Exchange, Microsoft SQL oder eine andere VSS-kompatible Applikation verfügen, die auf virtuellen Festplatten (VHDs) in der VM läuft. SnapManager for Hyper-V koordiniert die Autoren der Applikationen innerhalb der VM, um sicherzustellen, dass die Applikationsdaten beim Backup konsistent sind.
+
+Sie können außerdem eine VM aus einem applikationskonsistenten Backup wiederherstellen. Die Applikationen, die in der VM vorhanden sind, werden auf denselben Status wie zum Zeitpunkt des Backups wiederhergestellt. Mit SnapManager for Hyper-V wird die VM an ihrem ursprünglichen Speicherort wiederhergestellt.
+
+
+NOTE: Die VSS-Integration ist nur bei applikationskonsistenten Backups verfügbar. Absturzkonsistente Backups verwenden kein VSS.

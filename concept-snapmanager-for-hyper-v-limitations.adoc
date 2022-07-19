@@ -1,0 +1,49 @@
+---
+permalink: concept-snapmanager-for-hyper-v-limitations.html 
+sidebar: sidebar 
+keywords: important, understand, snapmanager, hyper-v, limitation 
+summary: Es ist wichtig, dass Sie wissen, dass einige Funktionen in SnapManager 2.1 und höher für Hyper-V nicht unterstützt werden 
+---
+= Liste der Einschränkungen von SnapManager for Hyper-V
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es ist wichtig, dass Sie verstehen, dass einige Funktionen nicht unterstützt werden in SnapManager 2.1 und höher für Hyper-V .
+
+* Das Abbrechen, das Anheben und Wiederaufnehmen von Backup- und Wiederherstellungsjobs wird nicht unterstützt.
+* Richtlinien können nicht über mehrere Datensätze hinweg kopiert werden.
+* Die rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) wird nicht unterstützt.
+* Das Ausschließen von virtuellen Festplatten (VHDs) von einem Backup-Job des SnapManager for Hyper-V Volume Shadow Copy Service (VSS) wird nicht unterstützt.
+* Die Wiederherstellung einzelner Dateien aus einer Backup-Kopie wird nicht nativ unterstützt.
+* Das Versionsübergreifende Management wird nicht unterstützt. Sie können z. B. nicht die Client-Konsole 1.2 verwenden, um SnapManager 2.0 für Hyper-V zu verwalten, und umgekehrt.
+* Wenn Sie mit der Wiederherstellung einer virtuellen Hyper-V-Maschine (VM) beginnen und eine weitere Sicherung oder Wiederherstellung derselben VM läuft, schlägt der Versuch fehl.
+* Das Wiederherstellen einer gelöschten VM aus einer absturzkonsistenten Backup-Kopie wird nur für Windows Server 2012 unterstützt.
+* Unterschiedliche Versionen von SnapManager für Hyper-V auf verschiedenen Knoten eines Failover-Clusters werden nicht unterstützt.
+* Das Zurücksetzen von SnapManager 2.1 für Hyper-V wird nicht unterstützt.
+* Backup- oder Restore-Jobs von virtuellen Maschinen werden nicht unterstützt, wenn Benutzer den Cluster-Besitzknoten während des Backups oder der Wiederherstellung ändern.
+* Backups im gemischten Modus (von Virtual Machines mit Dateien auf CSV 2.0-Volumes und SMB-Freigaben) werden nicht unterstützt.
+* Nachdem Sie den Storage einer VM mithilfe von Windows Server 2012 an einen anderen Standort migriert haben, können Sie vor der Migration auf dieser VM keine Backup-Kopien mehr wiederherstellen.
+* Für Windows Server 2012 können Sie keine Sicherungsjobs ausführen, in denen das Backup-Set sowohl ein Cluster Shared Volume (CSV) als auch eine freigegebene Festplatte enthält.
+* Wenn Sie die Einstellungen für Speicherverbindungen verwalten konfigurieren, können Sie das RPC-Protokoll (Remote Procedure Call) nicht verwenden; Sie können nur HTTP- und HTTPS-Protokolle verwenden.
+* Das Erstellen eines applikationskonsistenten Backups einer virtuellen Maschine (VM), die auf NAS-Speicher gespeichert ist, wird vom Betriebssystem Windows Server 2012 Hyper-V nicht unterstützt.
++
+Diese Einschränkung gilt nicht für absturzkonsistente Backups. Es gilt nur für den freien Hyper-V-Server, der keine Dienste für die gemeinsame Schattenkopieerstellung beinhaltet.
+
+* Der virtuelle Switch-Name für eine VM muss für die primären und sekundären Windows Hosts identisch sein.
+* Backup- und Restore-Vorgänge erfordern eine FlexClone Lizenz, wenn Hyper-V VMs über SMB 3.0 bereitgestellt werden.
+* Die maximal unterstützte LUN-Größe für Wiederherstellungen beträgt 14 TB.
+* Die folgenden Hyper-V Server unterstützen keine applikationskonsistenten Backups von VMs:
++
+** Microsoft Hyper-V Server 2016 (kostenlose Ausgabe)
+** Microsoft Hyper-V Server 2019 (kostenlose Ausgabe)
++
+Beachten Sie, dass diese Einschränkung nicht für absturzkonsistente Backups oder die folgenden Windows-Plattformen gilt:
+
+** Microsoft Windows Server 2016 Standard und Datacenter Edition
+** Microsoft Windows Server 2019 Standard und Datacenter Edition
+
+
+

@@ -1,0 +1,34 @@
+---
+permalink: reference-vss-requestor-backup-components-failed-failed-to-call-keep-snapshot-set.html 
+sidebar: sidebar 
+keywords: vss, requestor, backup, component, fail, call, snapshot, set 
+summary: VSS Requestor - Sicherungskomponenten fehlgeschlagen. Fehler beim Aufruf von „Snapshot-Satz beibehalten“. 
+---
+= VSS Requestor - Sicherungskomponenten fehlgeschlagen. Fehler beim Aufruf von „Snapshot-Satz beibehalten“.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Fehler*
++
+`Vss Requestor - Backup Components failed. Failed to call keep snapshot set. Reason Index and count must refer to a location within the string.`
+
+* *Beschreibung*
++
+Dieser Fehler tritt auf, wenn sich VMs in einem Sicherungsauftrag auf einer Storage Virtual Machine und auf einem CIFS-Server mit demselben Namen befinden.
+
+* *Korrekturmaßnahmen*
++
+Für diese Version nicht verfügbar.
+
+* * Fehlerbeispiel*
++
+.. Erstellen Sie eine Storage Virtual Machine und einen CIFS-Server mit dem gleichen Namen, z. B. „`test1`“.
+.. Fügen Sie den test1-Namen mit beiden IP-Adressen zum DNS hinzu.
+.. Installieren Sie auf einem Windows Server 2012 Host SnapManager für Hyper-V und erstellen Sie einige VMs unter Verwendung der CIFS Shares aus test1.
+.. Erstellen Sie eine Backup-Kopie, die diese VMs enthält.
+.. Beachten Sie, dass der Backupjob mit dem Fehler fehlschlägt: `Backup Components failed. Failed to call keep snapshot set. Reason Index and count must refer to a location within the string.`
+
+
+

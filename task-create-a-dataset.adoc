@@ -1,0 +1,33 @@
+---
+permalink: task-create-a-dataset.html 
+sidebar: sidebar 
+keywords: create, creating, dataset, virtual, machine, resource, protection, requirement 
+summary: Sie können Datensätze für VM-Ressourcen erstellen, die dieselben Sicherungsanforderungen erfüllen. Sie können Virtual Machines je nach Bedarf mehreren Datensätzen hinzufügen. 
+---
+= Erstellen eines Datensatzes
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Datensätze für VM-Ressourcen erstellen, die dieselben Sicherungsanforderungen erfüllen. Sie können Virtual Machines je nach Bedarf mehreren Datensätzen hinzufügen.
+
+Sie müssen die folgenden Informationen zur Verfügung haben:
+
+* Name und Beschreibung des Datensatzes
+* Virtuelle Maschinenressourcen, die Sie dem Datensatz hinzufügen möchten
+
+
+Dedizierte und gemeinsam genutzte Festplatten, die zum selben Host-Cluster gehören, sollten nicht in den gleichen Datensatz platziert werden. Wenn Sie diese Arten von Ressourcen zu einem einzelnen Datensatz hinzufügen, kann dies zum Versagen der Datensatz-Sicherung führen. Sie können nur eine Art von VM pro Datensatz verwenden: NAS oder SAN. Datensätze in gemischten Modi können nicht verwendet werden.
+
+Das Kontrollkästchen Datensatz validieren ist standardmäßig aktiviert. SnapManager für Hyper-V überprüft während der Erstellung oder Änderung eines Datensatzes auf Konfigurationsfehler in allen VMs. Sie müssen sicherstellen, dass das Kontrollkästchen nicht aktiviert ist, wenn Sie die Validierung des Datensatzes nicht aktivieren möchten.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Datensätze].
+. Klicken Sie im Bereich Aktionen auf *Datensatz erstellen*.
+. Füllen Sie die Seiten des Assistenten aus.
+
+
+Sie sollten dann dem von Ihnen erstellten Datensatz Schutzrichtlinien hinzufügen.

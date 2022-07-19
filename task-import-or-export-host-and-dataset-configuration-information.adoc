@@ -1,0 +1,33 @@
+---
+permalink: task-import-or-export-host-and-dataset-configuration-information.html 
+sidebar: sidebar 
+keywords: manage, host, management, console, multiple, import, export, information, dataset, consistency 
+summary: Obwohl Sie einen Host von nur einer Verwaltungskonsole aus verwalten sollten, können Sie Host- und Datensatzkonfigurationsinformationen von einer Remote Management-Konsole auf eine andere importieren und exportieren, um die Datenkonsistenz zu gewährleisten. 
+---
+= Importieren oder Exportieren von Konfigurationsinformationen für Hosts und Datensätze
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Obwohl Sie einen Host von nur einer Verwaltungskonsole aus verwalten sollten, können Sie Host- und Datensatzkonfigurationsinformationen von einer Remote Management-Konsole auf eine andere importieren und exportieren, um die Datenkonsistenz zu gewährleisten.
+
+Sie sollten Konfigurationsinformationen nicht in das Verzeichnis importieren oder exportieren, auf dem SnapManager für Hyper-V installiert ist. Wenn Sie SnapManager für Hyper-V deinstallieren, geht diese Datei verloren.
+
+
+NOTE: Mit dem Import- und Exportassistenten können Sie die Host- und Datensatzkonfigurationseinstellungen in eine zuvor exportierte Einstellung ändern. Wenn Sie diesen Vorgang in einer Cluster-Umgebung ausführen, müssen Sie die Einstellungen auf allen Nodes im Cluster importieren, damit alle Host- und Datensatzkonfigurationen identisch sind.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf *Schutz*.
+. Klicken Sie im Fensterbereich *Aktionen* auf *Import und Export*.
++
+Der Import- und Exportassistent wird angezeigt.
+
+. Führen Sie die Schritte im Assistenten aus, um Konfigurationsinformationen für Host- und Datensätze von einer Management Console in eine andere zu exportieren.
++
+
+NOTE: Die Exportdatei ist statisch und aktuell nur zu dem Zeitpunkt, zu dem die Exportdatei ausgeführt wurde.
+
+. Führen Sie die Schritte im Assistenten aus, um Konfigurationsinformationen für Hosts und Datensätze in die Ziel-Managementkonsole zu importieren.
+

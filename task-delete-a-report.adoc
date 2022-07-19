@@ -1,0 +1,22 @@
+---
+permalink: task-delete-a-report.html 
+sidebar: sidebar 
+keywords: delete, report, deleting 
+summary: Sie können einen oder mehrere Berichte löschen, wenn diese nicht mehr benötigt werden. 
+---
+= Löschen Sie einen Bericht
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können einen oder mehrere Berichte löschen, wenn diese nicht mehr benötigt werden.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Berichte[Datensätze] oder Menü:Berichte[Hosts].
+. Wählen Sie den Datensatz, die virtuelle Maschine oder den Host aus, der den Bericht oder die Berichte enthält, die Sie löschen möchten.
+. Wählen Sie im Fensterbereich Berichte den Bericht oder die Berichte aus, die Sie löschen möchten.
+. Klicken Sie im Bereich Aktionen auf *Bericht löschen* und klicken Sie zum Löschen auf *OK*.
+

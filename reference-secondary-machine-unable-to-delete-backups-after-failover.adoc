@@ -1,0 +1,25 @@
+---
+permalink: reference-secondary-machine-unable-to-delete-backups-after-failover.html 
+sidebar: sidebar 
+keywords: deleting, delete, backup, failover 
+summary: Löschen von Backups nach dem Failover 
+---
+= Backups nach dem Failover löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Nachricht*
++
+`The specified backup does not exist for some of the objects in the dataset.`
+
+* *Beschreibung*
++
+Nach dem Failover zu einem sekundären Standort (Standort B) können die am primären Standort erstellten Backups möglicherweise nicht gelöscht werden (Standort A). Wenn Sie sich an einem Disaster-Recovery-Standort (Standort B) befinden und versuchen, die Backups am primären Standort (Standort A) zu löschen, werden die Backups vom primären Standort (Standort A) anstatt vom Disaster-Recovery-Standort (Standort B) gelöscht.
+
+* *Korrekturmaßnahmen*
++
+Löschen Sie nach der Durchführung von Disaster Recovery-Vorgängen nur Backups, die an Ihrem aktuellen Standort erstellt wurden.
+
+

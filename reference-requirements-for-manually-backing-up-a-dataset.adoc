@@ -1,0 +1,87 @@
+---
+permalink: reference-requirements-for-manually-backing-up-a-dataset.html 
+sidebar: sidebar 
+keywords: backup, dataset, manual, first, name, describe, type, option, retention, policy, requirement 
+summary: Um einen Datensatz manuell zu sichern, müssen Sie zunächst den Namen und eine Beschreibung des Datensatzes festlegen, einen Backup-Typ und -Optionen auswählen und eine Aufbewahrungsrichtlinie festlegen. 
+---
+= Anforderungen für die manuelle Sicherung eines Datensatzes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um einen Datensatz manuell zu sichern, müssen Sie zunächst den Namen und eine Beschreibung des Datensatzes festlegen, einen Backup-Typ und -Optionen auswählen und eine Aufbewahrungsrichtlinie festlegen.
+
+
+
+== Name und Beschreibung der Sicherung
+
+Sie müssen dem Backup einen Namen und eine Beschreibung zuweisen.
+
+Die standardmäßige Namenskonvention für Backups ist DatasetName_Timestamp. Sie können alles im Backup-Namen ändern außer dem Zeitstempel, der immer als Teil des Backup-Namens erscheint.
+
+Backup-Namen und -Beschreibungen sind auf die folgenden Zeichen beschränkt:
+
+* Von A bis z
+* Von A bis Z
+* 0 bis 9
+* _ (Unterstrich)
+* - (Bindestrich)
+
+
+
+
+== Wahlmöglichkeit der Richtlinie
+
+Sie müssen entscheiden, welche Richtlinie Sie für das On-Demand-Backup verwenden möchten.
+
+Sie können eine bestimmte Richtlinie im Backup-Assistenten auswählen. Sie können die Aufbewahrungs- oder Replizierungsrichtlinie sowie die mit der Richtlinie verknüpften Skripte außer Kraft setzen, ohne die Richtlinie selbst zu ändern.
+
+Sie können auch „Keine“ auswählen. Damit können Sie ein bedarfsgesteuertes Backup durchführen, ohne Richtlinien erstellen zu müssen. Diese Option verwendet die Standardwerte für Aufbewahrungsrichtlinien, Replikationsrichtlinien und Skripts.
+
+
+
+== Aufbewahrungswert
+
+Sie können die Aufbewahrungsrichtlinie, die in der von Ihnen ausgewählten Richtlinie angegeben wurde, überschreiben. Bei diesem Vorgang müssen Sie entscheiden, wie lange die Backup-Kopien auf Stundenbasis, täglich, wöchentlich, monatlich oder unbegrenzt gespeichert werden sollen, bevor sie gelöscht werden.
+
+Sie können Backups entweder nach einer bestimmten Anzahl oder zu einem bestimmten Zeitpunkt aufbewahren. So können Sie beispielsweise die 10 aktuellen Backups aufbewahren oder Backups löschen, die älter als 15 Tage sind.
+
+
+
+== Art des Backups
+
+Es kann ein applikationskonsistentes oder ausfallkonsistentes Backup durchgeführt werden.
+
+
+
+== Backup-Optionen
+
+Sie können gespeicherte Statussicherungen zulassen.
+
+Das Standardverhalten von SnapManager für Hyper-V besteht darin, ein Backup zu scheitern, wenn eine oder mehrere virtuelle Maschinen nicht online gesichert werden können. Wenn eine virtuelle Maschine den Status „gespeichert“ oder „heruntergefahren“ aufweist, können Sie kein Online-Backup durchführen. In einigen Fällen befinden sich virtuelle Maschinen im gespeicherten Zustand oder müssen zur Wartung heruntergefahren werden, die Sicherung muss aber trotzdem fortgesetzt werden, auch wenn ein Online-Backup nicht möglich ist. Dazu können Sie die Virtual Machines, die sich im gespeicherten Zustand befinden, verschieben oder zu einem anderen Datensatz herunterfahren, wobei eine Richtlinie die Backups des gespeicherten Status ermöglicht.
+
+Sie können die vorhandene Richtlinie auch ändern, indem Sie das Kontrollkästchen gespeicherte Status VM-Sicherung zulassen aktivieren. Dadurch kann SnapManager für Hyper-V die virtuelle Maschine im gespeicherten Zustand sichern. Wenn Sie diese Option auswählen, schlägt SnapManager für Hyper-V das Backup nicht fehl, wenn der Hyper-V VSS Writer die virtuelle Maschine im gespeicherten Zustand sichert oder eine Offline-Sicherung der virtuellen Maschine durchführt. Die Durchführung eines gespeicherten Status oder eines Offline-Backups kann zu Ausfallzeiten führen.
+
+Der `distributed application-consistent backup` Diese Funktion ermöglicht es, dass mehrere VMs, die auf den Partner-Cluster-Nodes ausgeführt werden, in einer einzigen Snapshot-Kopie, die vom Backup-Node aus erstellt wurde, konsistent sind. Diese Funktion wird bei allen VMs unterstützt, die auf einem Windows-Volume mit CSV 2.0 über mehrere Knoten in einem Windows Failover Cluster ausgeführt werden.
+
+
+
+== Sekundärer Storage in einem SnapMirror Backup
+
+Mit diesen Optionen akzeptieren Sie Optionen, die sich auf einen sekundären Storage beziehen, der in einer SnapMirror-Beziehung definiert ist. Sie können *Update SnapMirror nach Backup* wählen. Im Optionsfenster Vault-Bezeichnung können Sie *SnapVault nach Backup aktualisieren* auswählen. Wenn Sie *SnapVault nach Backup* aktualisieren auswählen, müssen Sie im Dropdown-Menü eine Tresorbeschriftung auswählen oder eine benutzerdefinierte Bezeichnung eingeben.
+
+
+
+== Backup-Skripte
+
+Sie können die Skriptoptionen überschreiben, die in der von Ihnen ausgewählten Richtlinie angegeben sind.
+
+Diese Skripte werden auf allen Hosts der Datensatzmitglieder ausgeführt, es sei denn, Sie geben einen bestimmten Host im Skript an.
+
+*Verwandte Informationen*
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet: Hyper-V"]
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-buvault/home.html["ONTAP 9 Volume Backup mit SnapVault Express Guide"]

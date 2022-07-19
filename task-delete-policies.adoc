@@ -1,0 +1,25 @@
+---
+permalink: task-delete-policies.html 
+sidebar: sidebar 
+keywords: delete, policy, policies, deleting, dataset 
+summary: Sie können eine Richtlinie aus einem Datensatz löschen, wenn sie nicht mehr benötigt wird. 
+---
+= Richtlinien löschen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können eine Richtlinie aus einem Datensatz löschen, wenn sie nicht mehr benötigt wird.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Datensätze].
+. Wählen Sie den Datensatz aus, der die Richtlinie enthält, die Sie löschen möchten.
+. Wählen Sie im Fensterbereich Richtlinien die spezifische Richtlinie aus, die Sie löschen möchten.
+. Klicken Sie im Aktionsbereich auf *Entfernen* und klicken Sie auf *OK*, um die Richtlinie zu löschen.
++
+Durch das Löschen der Richtlinie werden auch die geplanten Jobs von allen Hosts gelöscht, die Mitglieder des Datensatzes sind.
+
+

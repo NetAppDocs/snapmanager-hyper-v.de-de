@@ -1,0 +1,30 @@
+---
+permalink: reference-restore-failure-after-storage-system-volume-renaming.html 
+sidebar: sidebar 
+keywords: restore, failure, storage, system, volume, renaming, rename 
+summary: Fehler wiederherstellen nach dem Umbenennen des Storage-System-Volumes. 
+---
+= Fehler wiederherstellen nach dem Umbenennen des Storage-System-Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Nachricht*
++
+`Some of the storage system snapshots required to restore the VM are missing or inconsistent.`
+
+* *Beschreibung*
++
+Wenn Storage System-Volumes umbenannt werden, können Sie eine Virtual Machine (VM) nicht aus seinem Backup wiederherstellen, das vor dem Umbenennen von Volumes erstellt wurde.
+
+* *Korrekturmaßnahmen*
++
+Wenn Storage System-Volumes umbenannt werden und eine VM aus einem Backup wiederhergestellt werden muss, das vor dem Umbenennen von Volumes erstellt wurde, dann gehen Sie folgendermaßen vor:
+
++
+** Stellen Sie beim Wiederherstellen einer VM aus MMC sicher, dass die Option „Snapshot-Überprüfung aktivieren“ auf der Seite *Wiederherstellungsoptionen* des Assistenten deaktiviert ist.
+** Stellen Sie beim Wiederherstellen einer VM mit PowerShell sicher, dass -`DisableVerifySnapshot` Der Parameter wurde angegeben.
+
+
+

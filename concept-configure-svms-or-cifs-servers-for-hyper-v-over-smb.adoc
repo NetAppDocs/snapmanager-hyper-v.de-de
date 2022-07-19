@@ -1,0 +1,18 @@
+---
+permalink: concept-configure-svms-or-cifs-servers-for-hyper-v-over-smb.html 
+sidebar: sidebar 
+keywords: configure, configuring, single, storage, virtual, machine, svm, cif, server, multiple, application, resource, sharing, share, issue, smb, hyper-v 
+summary: 'Die Konfiguration einer einzelnen Storage Virtual Machine (SVM) oder eines CIFS-Servers für mehrere Applikationen kann zu Problemen bei der gemeinsamen Nutzung von Ressourcen führen, was sich wiederum auf die Hyper-V Umgebung auswirkt.' 
+---
+= Konfigurieren Sie SVMs oder CIFS-Server für Hyper-V über SMB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Konfiguration einer einzelnen Storage Virtual Machine (SVM) oder eines CIFS-Servers für mehrere Applikationen kann zu Problemen bei der gemeinsamen Nutzung von Ressourcen führen, was sich wiederum auf die Hyper-V Umgebung auswirkt. Sie sollten je nach Ihren Anforderungen dedizierte SVMs oder CIFS Server für Hyper-V über SMB konfigurieren.
+
+*Verwandte Informationen*
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapManager_Suite/How_to_set_up_SVM%2F%2FCIFS_for_Hyper-V_over_SMB["NetApp KB-Artikel 1015099: Einrichtung von SVM/CIFS für Hyper-V über SMB"^]

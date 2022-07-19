@@ -1,0 +1,37 @@
+---
+permalink: concept-report-management.html 
+sidebar: sidebar 
+keywords: view, delete, backup, restore, configuration, report, snapmanager, hyper-v, information, virtual, machine, vm, managing, manage 
+summary: In SnapManager für Hyper-V können Sie Backup-, Restore- und Konfigurationsberichte anzeigen und löschen Diese Berichte enthalten wichtige Informationen zu Ihren Datensätzen, Virtual Machines und Hosts. Sie können Berichte auch in verschiedenen Formaten exportieren. 
+---
+= Verwalten von Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+In SnapManager für Hyper-V können Sie Backup-, Restore- und Konfigurationsberichte anzeigen und löschen Diese Berichte enthalten wichtige Informationen zu Ihren Datensätzen, Virtual Machines und Hosts. Sie können Berichte auch in verschiedenen Formaten exportieren.
+
+* *Backup-Berichte*
++
+Backup-Berichte enthalten alle Backup-Informationen für alle Hosts, die zu einem bestimmten Datensatz gehören. Sie können einen Backup-Bericht für einen Datensatz oder eine virtuelle Maschine anzeigen. Für eine virtuelle Maschine angezeigte Berichte verwenden den Namen der virtuellen Maschine anstelle der GUID.
+
++
+Wenn der Backup-Bericht angezeigt wird, können Sie ihn in verschiedene Formate exportieren.
+
+* *Berichte wiederherstellen*
++
+Restore Reports zeigen alle Informationen zum Wiederherstellungsvorgang auf VM-Basis an.
+
++
+Wenn der Wiederherstellungsbericht angezeigt wird, können Sie ihn in verschiedene Formate exportieren.
+
+* *Konfigurationsberichte*
++
+Konfigurationsberichte zeigen die Benachrichtigungseinstellungen, den Berichtspfad und den SnapInfo-Pfad für den ausgewählten Host an.
+
++
+Wenn der Konfigurationsbericht angezeigt wird, können Sie ihn in verschiedene Formate exportieren.
+
+

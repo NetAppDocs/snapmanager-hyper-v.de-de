@@ -1,0 +1,56 @@
+---
+permalink: task-change-the-snapinfo-directory-path.html 
+sidebar: sidebar 
+keywords: control, snapinfo, directory, path, setting, configuration, wizard, action, changing, change 
+summary: Sie können die Pfadeinstellungen des SnapInfo-Verzeichnisses mithilfe des Konfigurationsassistenten oder der SnapInfo-Einstellungen steuern. 
+---
+= Ändern Sie den SnapInfo-Verzeichnispfad
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Pfadeinstellungen für das SnapInfo-Verzeichnis mithilfe des Konfigurationsassistenten oder der Aktion *SnapInfo settings* steuern.
+
+SnapInfo Verzeichniseinstellungen werden auf der Host-Ebene in SnapManager für Hyper-V angegeben SnapManager für Hyper-V unterstützt NAS-Hosts (SMB) und SAN-Hosts. Bei SAN-Hosts werden die SnapInfo-Einstellungen auf Volume-Ebene angewendet. Bei NAS-Hosts werden die SnapInfo-Einstellungen auf SMB-Share-Level angewendet.
+
+Wenn Sie die IP-Adresse des Speichersystems zu SnapDrive für Windows TPS hinzugefügt haben, werden die Speichereinstellungen von SnapDrive für Windows automatisch ausgefüllt, wenn Sie den Konfigurationsassistenten in SnapManager für Hyper-V. ausführen Wenn SnapDrive für Windows TPS nicht konfiguriert ist, müssen Sie die IP-Adresse des Speichersystems auf der Registerkarte Speicherverbindungen verwalten in SnapManager für Hyper-V angeben
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Hosts].
+. Wählen Sie den Host aus, für den Sie den SnapInfo-Verzeichnispfad ändern möchten.
+. Wählen Sie im Fensterbereich *Aktionen* die Option *SnapInfo-Einstellungen* aus.
++
+Das Dialogfeld *SnapInfo Einstellungen* wird geöffnet.
+
+. Wählen Sie den Storage-Typ aus den angezeigten Optionen:
++
+|===
+| Option | Beschreibung 
+
+
+ a| 
+San
+ a| 
+Dies ist der Standard-Speichertyp.
+
+
+
+ a| 
+NAS
+ a| 
+Verwenden Sie diese Option für SMB-Freigaben.
+
+|===
+. Klicken Sie Auf *Durchsuchen*.
++
+Das Fenster nach Ordner suchen wird geöffnet.
+
+. Wählen Sie Ihr SnapInfo Storage-System (SAN) oder Volume (NAS) aus und klicken Sie auf *OK*.
++
+Die Hosts, die angezeigt werden, sind NAS-Freigaben, die zu den Speichersystemen gehören, die mit registriert wurden `Manage Storage Connections` Option auf Host-Ebene. Wenn Sie die gesuchten Freigaben nicht sehen, stellen Sie dies sicher `Manage Storage Connections` Wurde ordnungsgemäß konfiguriert.
+
+. Klicken Sie im Fenster *SnapInfo Einstellungen* auf *OK*.
+

@@ -1,0 +1,24 @@
+---
+permalink: task-view-policies.html 
+sidebar: sidebar 
+keywords: view, policy, detail, associate, specific, dataset, policies 
+summary: Sie können Richtliniendetails anzeigen, die mit einem bestimmten Datensatz verknüpft sind. 
+---
+= Anzeigen von Richtlinien
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Richtliniendetails anzeigen, die mit einem bestimmten Datensatz verknüpft sind.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Datensätze].
+. Wählen Sie den Datensatz aus, der die Richtlinien enthält, die Sie anzeigen möchten.
+. Wählen Sie im Fensterbereich Richtlinien die spezifische Richtlinie aus, für die Sie Details anzeigen möchten.
++
+Informationen über die Richtlinie werden im Bereich Details angezeigt.
+
+

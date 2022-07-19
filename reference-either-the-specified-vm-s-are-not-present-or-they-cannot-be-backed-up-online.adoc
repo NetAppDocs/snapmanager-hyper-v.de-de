@@ -1,0 +1,69 @@
+---
+permalink: reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html 
+sidebar: sidebar 
+keywords: vm, present, backed, up, online 
+summary: Entweder sind die angegebenen VMs nicht vorhanden oder können nicht online gesichert werden 
+---
+= Entweder sind die angegebenen VMs nicht vorhanden oder können nicht online gesichert werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Nachricht*
++
+`Either the specified VM(s) are not present or they cannot be backed up online`
+
+* *Beschreibung*
++
+Ein Grund dafür ist, dass diese Meldung auftritt, wenn applikationskonsistente Backups fehlschlagen, wenn die Größe der Pass-Through-Festplatte auf der VM weniger als 300 MB beträgt. Ihr Fehlerprotokoll ähnelt dem folgenden Beispiel:
+
++
+[listing]
+----
+Log Name:      Application
+Source:        SnapMgrServiceHost
+Date:          11/12/2012 12:24:28 PM
+Event ID:      106
+Task Category: Backup Event
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      defiant16.wak-qa.com
+Description:
+SnapManager for Hyper-V backup failed to complete
+
+Backup Failed for the following VM(s) since it cannot be backedup online or No VM to be found for backup
+               VM Name: demovm-0
+----
++
+Es gibt keine anderen Fehlermeldungen für Anwendungen oder Systeme, die den Fehler anzeigen.
+
+* *Korrekturmaßnahmen*
++
+Sie können entweder die Größe des Pass-Through-Laufwerks auf größer als 300 MB oder die Sicherung mit der Option Speichern der VM-Sicherung zulassen aktiviert ausführen.
+
++
+
+NOTE: Diese Korrekturmaßnahme steht sowohl in SAN- als auch in NAS-Umgebungen zur Verfügung.
+
+* *Nachricht*
++
+`Either the specified VM(s) are not present or they cannot be backed up online`
+
+* *Beschreibung*
++
+Ein zweiter Grund, warum diese Meldung auftritt, ist, dass Windows kein Online-Backup dieses Systems durchführen kann, da die Option „Snapshot mit dem Umfang von Hyper-V VMs“ aktiviert ist. Im Umfang enthaltene Snapshots werden hauptsächlich von geschäftskritischen Windows Updates verwendet.
+
+* *Korrekturmaßnahmen*
++
+Sie müssen das deaktivieren `scoped snapshots` Option durch Erstellen einer DWORD `ScopeSnapshots` Parameter mit Wert 0 in:
+
++
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\SystemRestore\`
+
++
+
+NOTE: Diese Korrekturmaßnahme steht sowohl in SAN- als auch in NAS-Umgebungen zur Verfügung.
+
+

@@ -1,0 +1,25 @@
+---
+permalink: task-view-a-virtual-machine.html 
+sidebar: sidebar 
+keywords: virtual, machine, tab, vhd, detail, pane, vm, information, monitor, status, view 
+summary: Auf der Registerkarte „Virtual Machine“ und der Registerkarte „VHD“ im Fensterbereich „Details“ für eine virtuelle Maschine können Sie Informationen zu dieser Maschine anzeigen und den Status dieser Maschine überwachen. 
+---
+= Zeigen Sie eine virtuelle Maschine an
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Registerkarte „Virtual Machine“ und der Registerkarte „VHD“ im Fensterbereich „Details“ für eine virtuelle Maschine können Sie Informationen zu dieser Maschine anzeigen und den Status dieser Maschine überwachen.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Hosts > Schutz > Datensätze].
+. Wählen Sie den Datensatz oder Host aus, zu dem die virtuelle Maschine gehört.
+. Wählen Sie die entsprechende virtuelle Maschine aus.
+
+
+Auf der Registerkarte Virtual Machine werden Name, GUID und Status der ausgewählten virtuellen Maschine angezeigt.
+
+Auf der Registerkarte VHD werden Systemfestplatte, Bereitstellungspunkt, VHD full Path, LUN Path, Storage-System-Name, angezeigt. Seriennummer und Volume-Name, der der ausgewählten virtuellen Maschine zugeordnet ist.

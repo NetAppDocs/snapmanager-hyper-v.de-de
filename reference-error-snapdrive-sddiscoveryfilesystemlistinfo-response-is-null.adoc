@@ -1,0 +1,29 @@
+---
+permalink: reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.html 
+sidebar: sidebar 
+keywords: snapdrive, sddiscoveryfilesystemlistinfo, response, null, back, up 
+summary: SnapDrive SDDiscoveryFileSystemListInfo die Antwort ist beim Backup Null 
+---
+= SnapDrive SDDiscoveryFileSystemListInfo die Antwort ist beim Backup Null
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Sie erhalten den Fehler `SnapDrive SDDiscoveryFileSystemListInfo response is null while backing up`.
+
+* *Ursache*
++
+Diese Meldung tritt auf, wenn der SnapInfo-Standort, an den Sie sichern, nicht verfügbar ist.
+
+* *Korrekturmaßnahmen*
++
+Überprüfen Sie, ob der SnapInfo-Speicherort vorhanden ist und verfügbar ist. Wenn sich der Speicherort geändert hat, führen Sie den Konfigurationsmanager erneut aus, um den neuen Speicherort anzugeben. Versuchen Sie es erneut.
+
+
+
+*Verwandte Informationen*
+
+xref:task-set-up-a-snapinfo-lun.adoc[Einrichten einer SnapInfo LUN]

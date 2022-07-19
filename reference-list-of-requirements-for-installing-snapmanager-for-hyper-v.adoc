@@ -1,0 +1,56 @@
+---
+permalink: reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: environment, hardware, software, ontap, license, licensing, requirement, install, snapmanager, hyper-v, windows, .net, 4.5 
+summary: Ihre Umgebung muss alle Hardware-, Software-, ONTAP- und Lizenzierungsanforderungen erfüllen, bevor Sie SnapManager für Hyper-V installieren können 
+---
+= Liste der Anforderungen für die Installation von SnapManager für Hyper-V
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ihre Umgebung muss alle Hardware-, Software-, ONTAP- und Lizenzierungsanforderungen erfüllen, bevor Sie SnapManager für Hyper-V installieren können Das Installationsprogramm wird angehalten, wenn die Anforderungen für das Windows-Betriebssystem und .Net 4.5 nicht erfüllt werden.
+
+
+
+== Anforderungen für übergeordnete Hyper-V Hosts
+
+Sie müssen über die übergeordneten Hyper-V-Hosts verfügen, auf denen Windows Server 2008 R2 oder höher ausgeführt wird. Auf den übergeordneten Hosts müssen die Hyper-V-Rollen aktiviert sein. Sie müssen SnapDrive 7.1 für Windows oder eine höhere Version auf dem übergeordneten Hyper-V Host installieren.
+
+
+
+== SnapManager für Hyper-V herunterladen
+
+Sie müssen die SnapManager für Hyper-V Software von der NetApp Support-Website heruntergeladen haben.
+
+
+
+== Storage-Systemanforderungen
+
+Das Storage-System muss die entsprechende Version der ONTAP Software ausführen. Zur Installation von SnapManager für Hyper-V können Sie entweder eine Host- oder eine Storage-Systemlizenz verwenden
+
+
+
+== Lizenzen Zu Haben
+
+Zum Ausführen von SnapManager für Hyper-V müssen Sie über die entsprechenden Lizenzen verfügen
+
+
+
+== Anmeldedaten
+
+Zum Installieren und Ausführen von SnapManager für Hyper-V müssen Sie über die entsprechenden Zugangsdaten verfügen
+
+
+
+== Servicekonto und Authentifizierungsanforderungen
+
+Sie müssen über ein Servicekonto verfügen und die Authentifizierungsanforderungen erfüllen. Sie müssen sich über das Dienstkonto beim Host anmelden können, und dieses Konto muss über Administratorrechte verfügen.
+
+
+
+== Nummer des Webservice-Ports
+
+Sie müssen über die Nummer des Webservice Net.TCP-Ports verfügen. Die Standardanschlussnummer ist 808. Wenn Sie SnapManager for Hyper-V auf einem Cluster installieren, müssen Sie sicherstellen, dass für alle Nodes die gleiche Port-Nummer verwendet wird.

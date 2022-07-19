@@ -1,0 +1,24 @@
+---
+permalink: task-add-a-hyper-v-parent-host-or-host-cluster.html 
+sidebar: sidebar 
+keywords: add, hyper-v, parent, host, cluster, back, up, restore, virtua, machine 
+summary: Sie können einen übergeordneten Hyper-V-Host oder ein Host-Cluster hinzufügen, um Ihre Virtual Machines zu sichern und wiederherzustellen. 
+---
+= Fügen Sie einen übergeordneten Hyper-V-Host oder einen Host-Cluster hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können einen übergeordneten Hyper-V-Host oder ein Host-Cluster hinzufügen, um Ihre Virtual Machines zu sichern und wiederherzustellen.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf *Schutz*.
+. Klicken Sie im Bereich Aktionen auf *Add Host*.
+. Führen Sie den Assistenten * Host hinzufügen* aus.
+
+
+Wenn Sie einem Cluster einen Host hinzufügen, werden die Informationen über den neuen Host nicht automatisch in der GUI angezeigt. Fügen Sie die Hostinformationen manuell der XML-Datei im Installationsverzeichnis hinzu.
+
+SnapManager für Hyper-V muss auf jedem Cluster-Knoten installiert sein. Wenn SnapManager für Hyper-V nicht installiert ist, werden Sie aufgefordert, den Assistenten zur Installation von Remote-Hosts auszuführen.

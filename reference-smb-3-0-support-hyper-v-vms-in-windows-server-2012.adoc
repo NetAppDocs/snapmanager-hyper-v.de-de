@@ -1,0 +1,22 @@
+---
+permalink: reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html 
+sidebar: sidebar 
+keywords: microsoft, enhance, vss, infrastructure, support, application-consistent, backup, hyper-v, virtual, machine, vm, smb, target 
+summary: 'Microsoft hat die VSS-Infrastruktur erweitert, um applikationskonsistente Backups von Hyper-V Virtual Machines (VMs) zu unterstützen, die auf SMB 3.0 Shares ausgeführt werden. Dazu verwendet Microsoft den neuen Remote VSS Hardware Provider, der auf dem SMB Ziel ausgeführt wird.' 
+---
+= Unterstützung von SMB 3.0 für Hyper-V VMs in Windows Server 2012
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Microsoft hat die VSS-Infrastruktur erweitert, um applikationskonsistente Backups von Hyper-V Virtual Machines (VMs) zu unterstützen, die auf SMB 3.0 Shares ausgeführt werden. Dazu verwendet Microsoft den neuen Remote VSS Hardware Provider, der auf dem SMB Ziel ausgeführt wird.
+
+Der neue Anbieter namens SMB File Share Provider ist über Windows 2012 Hypervisor erhältlich, um Hyper-V VM-Backups zu unterstützen und zu koordinieren, die auf SMB 3.0 Shares ausgeführt werden.
+
+Wenn VSS Requestor (SnapManager for Hyper-V) dem VSS Snapshot Set eine SMB 3.0-Freigabe mit Hyper-V VMs hinzufügt, ruft VSS den neuen SMB File Share Copy Provider dazu auf, die MSRPC-Befehle an das SMB-Ziel zu senden, um die VSS-Backups zu koordinieren.
+
+Der neue auf dem SMB-Ziel ausgeführte File Share Shadow Copy Agent (Remote VSS Provider) ist für das Erstellen der tatsächlichen Hardware-Snapshot-Kopie verantwortlich.
+
+Data ONTAP 8.2 implementiert den Shadow Copy Agent (Remote VSS Hardware Provider) für Dateifreigaben, um die applikationskonsistente Backup-Kopie der SMB-Freigaben auszuführen.

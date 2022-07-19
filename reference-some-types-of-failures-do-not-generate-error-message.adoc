@@ -1,0 +1,25 @@
+---
+permalink: reference-some-types-of-failures-do-not-generate-error-message.html 
+sidebar: sidebar 
+keywords: backup, failure, result, partial 
+summary: Einige Arten von Backup-Fehlern führen nicht zu einem teilweisen Backup-Fehler. 
+---
+= Einige Arten von Backup-Fehlern führen nicht zu einem teilweisen Backup-Fehler
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Wenn eine Virtual Machine in einem Datensatz einen Fehler hat, schließt SnapManager für Hyper-V das Datensatz-Backup nicht erfolgreich ab, und in einigen Szenarien kommt es nicht zu einem teilweisen Ausfall. In diesen Situationen fällt das gesamte Datensatz-Backup aus.
+
+* *Beispiel*
++
+In einem Szenario, in dem ein Storage-System-Volume die maximal 255 Snapshot Kopien überschreitet, erzeugt SnapManager für Hyper-V einen partiellen Ausfall, obwohl das Problem mit einer Untermenge an Virtual Machines des Datensatzes verbunden ist.
+
+* *Korrekturmaßnahmen*
++
+Um den Sicherungsvorgang erfolgreich abzuschließen, müssen Sie die virtuelle Maschine, die das Problem hat, beheben. Ist dies nicht möglich, können Sie die virtuelle Maschine vorübergehend aus dem Datensatz entfernen oder einen Datensatz erstellen, der nur virtuelle Maschinen enthält, die kein Problem haben.
+
+

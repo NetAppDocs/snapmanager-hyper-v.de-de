@@ -1,0 +1,288 @@
+---
+settings:
+  name: SnapManager for Hyper-V
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: de-de,us-en,ja-jp,zh-cn,zh-tw,ko-kr,fr-fr
+sidebar:
+  entries:
+  - title: SnapManager for Hyper-V – Dokumentation
+    url: "/index.html"
+  - title: Versionshinweise
+    url: "/release-notes.html"
+  - title: Was ist SnapManager für Hyper-V
+    url: "/concept-what-snapmanager-for-hyper-v-is.html"
+    entries:
+    - title: Ihre Möglichkeiten mit SnapManager für Hyper-V
+      url: "/concept-what-you-can-do-with-snapmanager-for-hyper-v.html"
+    - title: Liste der Einschränkungen von SnapManager for Hyper-V
+      url: "/concept-snapmanager-for-hyper-v-limitations.html"
+    - title: Konzepte für das Datenmanagement
+      url: "/concept-data-management-concepts.html"
+  - title: Liste der Anforderungen für die Installation von SnapManager für Hyper-V
+    url: "/reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html"
+    entries:
+    - title: Lizenzierung von SnapManager für Hyper-V für ONTAP
+      url: "/reference-snapmanager-for-hyper-v-licensing-for-ontap.html"
+    - title: Anforderungen für übergeordnete Hyper-V Hosts
+      url: "/reference-hyper-v-parent-host-requirements.html"
+    - title: Hotfix-Anforderungen für Windows Server-Umgebungen
+      url: "/reference-hotfix-requirements-for-windows-server-environments.html"
+    - title: Lizenzanforderungen
+      url: "/reference-license-requirements.html"
+    - title: Anforderungen für die Verwendung des Assistenten für die Installation
+        von Remote-Hosts
+      url: "/reference-requirements-for-remote-host-install.html"
+  - title: Installation von SnapManager für Hyper-V
+    url: "/concept-install-snapmanager-for-hyper-v.html"
+    entries:
+    - title: Laden Sie SnapManager für Hyper-V herunter
+      url: "/task-download-snapmanager-for-hyper-v.html"
+    - title: Installationsauftrag für SnapDrive für Windows und SnapManager für Hyper-V
+      url: "/concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html"
+    - title: Installation von SnapManager für Hyper-V
+      url: "/task-install-snapmanager-for-hyper-v.html"
+    - title: Remote-Installation oder -Deinstallation von SnapManager für Hyper-V
+        auf Nodes oder Hosts
+      url: "/task-remotely-install-or-uninstall-snapmanager-for-hyper-v-on-nodes.html"
+    - title: Liste und Beschreibung der Befehlszeilen-Schalter für automatische Installation
+      url: "/reference-command-line-switch-descriptions.html"
+  - title: Deinstallieren Sie SnapManager for Hyper-V unter Windows
+    url: "/concept-uninstall-snapmanager-for-hyper-v-on-windows.html"
+    entries:
+    - title: Deinstallieren Sie SnapManager for Hyper-V
+      url: "/task-uninstall-snapmanager-for-hyper-v.html"
+  - title: Konfiguration von SnapManager für Hyper-V
+    url: "/concept-configure-snapmanager-for-hyper-v.html"
+    entries:
+    - title: Dashboard-Einstellungen
+      url: "/concept-dashboard-settings.html"
+    - title: Hosts konfigurieren
+      url: "/concept-configure-hosts.html"
+      entries:
+      - title: Anforderungen für das Hinzufügen eines übergeordneten Hyper-V-Hosts
+          oder Host-Clusters
+        url: "/reference-requirements-for-adding-a-hyper-v-parent-host-or-host-cluster.html"
+      - title: Fügen Sie einen übergeordneten Hyper-V-Host oder einen Host-Cluster
+          hinzu
+        url: "/task-add-a-hyper-v-parent-host-or-host-cluster.html"
+      - title: Verwalten von Einstellungen für Storage-Verbindungen
+        url: "/task-manage-storage-connection-settings.html"
+      - title: Zeigen Sie einen übergeordneten Hyper-V-Host oder einen Host-Cluster
+          an
+        url: "/task-view-a-hyper-v-parent-host-or-host-cluster.html"
+      - title: Zeigen Sie eine virtuelle Maschine an
+        url: "/task-view-a-virtual-machine.html"
+      - title: Migrieren einer Hyper-V Virtual Machine für den Betrieb von SnapManager
+          für Hyper-V
+        url: "/task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html"
+      - title: Importieren oder Exportieren von Konfigurationsinformationen für Hosts
+          und Datensätze
+        url: "/task-import-or-export-host-and-dataset-configuration-information.html"
+      - title: Entfernen Sie einen übergeordneten Hyper-V-Host oder ein übergeordnetes
+          Host-Cluster
+        url: "/task-remove-a-hyper-v-parent-host.html"
+      - title: Einstellungen für Ereignisbenachrichtigungen
+        url: "/concept-event-notification-settings.html"
+        entries:
+        - title: Konfigurieren Sie E-Mail-Benachrichtigungen
+          url: "/concept-configure-multiple-recipients-for-email-notifications-in-smhv.html"
+      - title: Einstellungen für Berichtspfade
+        url: "/concept-report-path-settings.html"
+    - title: Konfigurieren Sie die SnapInfo Verzeichniseinstellungen
+      url: "/concept-configure-snapinfo-directory-settings.html"
+      entries:
+      - title: Einrichten einer SnapInfo LUN
+        url: "/task-set-up-a-snapinfo-lun.html"
+      - title: Ändern Sie den SnapInfo-Verzeichnispfad
+        url: "/task-change-the-snapinfo-directory-path.html"
+    - title: Datensätze konfigurieren
+      url: "/concept-configure-datasets.html"
+      entries:
+      - title: Anforderungen für das Erstellen eines Datensatzes
+        url: "/reference-requirements-for-creating-a-dataset.html"
+      - title: Erstellen eines Datensatzes
+        url: "/task-create-a-dataset.html"
+      - title: Ändern eines Datensatzes
+        url: "/task-modify-a-dataset.html"
+      - title: Zeigen Sie einen Datensatz an
+        url: "/task-view-a-dataset.html"
+      - title: Löschen Sie einen Datensatz
+        url: "/task-delete-a-dataset.html"
+    - title: Richtlinien konfigurieren
+      url: "/concept-configure-policies.html"
+      entries:
+      - title: Anforderungen für das Hinzufügen von Richtlinien zu einem Datensatz
+        url: "/reference-requirements-for-adding-policies-to-a-dataset.html"
+      - title: Richtlinien hinzufügen
+        url: "/task-add-policies.html"
+      - title: Richtlinien ändern
+        url: "/task-modify-policies.html"
+      - title: Anzeigen von Richtlinien
+        url: "/task-view-policies.html"
+      - title: Richtlinien löschen
+        url: "/task-delete-policies.html"
+    - title: Konfigurieren Sie SVMs oder CIFS-Server für Hyper-V über SMB
+      url: "/concept-configure-svms-or-cifs-servers-for-hyper-v-over-smb.html"
+  - title: Verwalten von Berichten
+    url: "/concept-report-management.html"
+    entries:
+    - title: Zeigt einen Datensatz-Bericht an
+      url: "/task-view-a-report.html"
+    - title: Anzeigen eines Host-Berichts
+      url: "/task-view-a-host-report.html"
+    - title: Löschen Sie einen Bericht
+      url: "/task-delete-a-report.html"
+  - title: VSS-Komponenten
+    url: "/concept-overview-of-vss-components.html"
+    entries:
+    - title: CSV 2.0 unter Windows Server 2012 und höher
+      url: "/concept-cluster-shared-volume-2-0-architecture.html"
+    - title: Unterstützung von SMB 3.0 für Hyper-V VMs in Windows Server 2012
+      url: "/reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html"
+    - title: Wie SnapManager für Hyper-V VSS verwendet
+      url: "/concept-how-snapmanager-for-hyper-v-uses-vss.html"
+    - title: Anforderung von ONTAP VSS Hardware Provider
+      url: "/concept-ontap-vss-hardware-provider-requirement.html"
+    - title: Installierte VSS-Anbieter anzeigen
+      url: "/task-view-installed-vss-providers.html"
+    - title: Überprüfen Sie, ob der VSS-Hardware-Anbieter erfolgreich verwendet wurde
+      url: "/task-verify-that-the-vss-hardware-provider-was-used-successfully.html"
+  - title: Erstellen und Managen von Backup-Jobs in SnapManager für Hyper-V
+    url: "/concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html"
+    entries:
+    - title: Anforderungen für die manuelle Sicherung eines Datensatzes
+      url: "/reference-requirements-for-manually-backing-up-a-dataset.html"
+    - title: Wie SnapManager für Hyper-V gespeicherte Backups verarbeitet
+      url: "/concept-how-snapmanager-for-hyper-v-handles-saved-state-backups.html"
+    - title: Manuelles Backup eines Datensatzes
+      url: "/task-manually-backing-up-a-dataset.html"
+    - title: Überwachen von Backup-Jobs
+      url: "/task-monitor-backup-jobs.html"
+    - title: Löschen Sie ein Backup
+      url: "/task-delete-a-backup.html"
+  - title: Wiederherstellen einer virtuellen Maschine aus einer Backup-Kopie
+    url: "/concept-restore-a-virtual-machine.html"
+    entries:
+    - title: Anforderungen für die Wiederherstellung einer virtuellen Maschine
+      url: "/reference-requirements-for-restoring-a-virtual-machine.html"
+    - title: Wiederherstellen einer virtuellen Maschine aus einer Backup-Kopie
+      url: "/task-restore-a-virtual-machine-from-a-backup-copy.html"
+  - title: Führen Sie ein Rolling Upgrade des Cluster-Betriebssystems durch
+    url: "/concept-perform-a-cluster-os-rolling-upgrade.html"
+    entries:
+    - title: Zuordnen von LUNs im gemischten Betriebssystem-Modus
+      url: "/task-map-luns-after-the-windows-server-2016-node-addition.html"
+    - title: Aktualisieren Sie den Datensatz und SnapInfo über alle Nodes hinweg
+      url: "/task-update-the-dataset-and-snapinfo-across-all-nodes.html"
+  - title: Disaster Recovery
+    url: "/concept-perform-disaster-recovery.html"
+    entries:
+    - title: Konfigurieren Sie SnapManager für Hyper-V für Failover
+      url: "/concept-configure-snapmanager-for-hyper-v-for-failover.html"
+    - title: Wiederherstellung und Wiederherstellung nach einem Disaster Recovery-Failover
+      url: "/task-recover-and-restore-from-a-disaster-recovery-failover.html"
+    - title: Neukonfigurieren der Storage-Systeme nach einem Disaster-Recovery-Failback
+      url: "/task-reconfigure-storage-systems-after-a-disaster-recovery-failback.html"
+    - title: Wiederherstellung der ursprünglichen Konfiguration für Standalone Hosts
+      url: "/task-restore-the-original-configuration-for-standalone-hosts.html"
+    - title: Wiederherstellung der Originalkonfiguration für Cluster-Hosts
+      url: "/task-restore-the-original-configuration-for-clustered-hosts.html"
+  - title: Fehlerbehebung bei SnapManager für Hyper-V
+    url: "/concept-snapmanager-for-hyper-v-troubleshoot.html"
+    entries:
+    - title: Das Backup für die folgenden VMs ist fehlgeschlagen, da es nicht online
+        gesichert werden kann oder keine VM zum Backup gefunden werden kann
+      url: "/reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html"
+    - title: Unerwarteter Fehler beim Abfragen der IVssWriter Callback-Schnittstelle.
+        hr = 0x80070005, Zugriff verweigert.
+      url: "/reference-unexpected-error-querying-for-the-ivsswritercallback-interface-hr-0x80070005.html"
+    - title: Backup-Berichte verwenden Zeitzoneninformationen der Managementkonsole
+        im Berichtsnamen
+      url: "/reference-backup-reports-use-management-console-time-zone-information-in-report-name.html"
+    - title: Benachrichtigungen zum Sichern und Wiederherstellen werden nicht in Umgebungen
+        mit ausschließlich IPv6 gesendet
+      url: "/reference-backup-and-restore-notifications-not-sent-in-ipv6-only-environments.html"
+    - title: Failover-Clustering-Ereignis-ID 5121
+      url: "/reference-failover-clustering-event-id-5121.html"
+    - title: Backups von virtuellen Maschinen, die während eines Wiederherstellungsvorgangs
+        erstellt wurden, können ungültig sein
+      url: "/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html"
+    - title: Virtual Machine managt sich selbst.
+      url: "/reference-virtual-machine-adding-itself-to-a-dataset.html"
+    - title: Die Verbindungszeit ist bei nur IPv6-Host länger
+      url: "/reference-connection-time-is-longer-with-ipv6-only-host.html"
+    - title: 'Fehler beim Volume Shadow Copy Service: Es wurde eine interne Inkonsistenz
+        erkannt'
+      url: "/reference-volume-shadow-copy-service-error-an-internal-inconsistency-was-detected.html"
+    - title: Web Service Client Kanal konnte keine Verbindung zur KonfigurationManagementService-Instanz
+        auf Maschine smhv51_81clus herstellen
+      url: "/reference-web-service-client-channel-was-unable-to-connect-to-the-configurationmanagementservice-instance-on-machine-smhv51-81clus.html"
+    - title: Benutzerdefinierte MSI-Eigenschaft, die in der automatischen Installation
+        verwendet wird
+      url: "/reference-msi-custom-property-used-in-silent-installation.html"
+    - title: Keine Lizenzierung von SnapManager für Hyper-V auf dem Host oder im Speichersystem
+      url: "/reference-snapmanager-for-hyper-v-is-not-licensed-on-the-host-or-in-the-storage-system.html"
+    - title: Backups nach dem Failover löschen
+      url: "/reference-secondary-machine-unable-to-delete-backups-after-failover.html"
+    - title: Die Storage-Performance verschlechtert sich nach einem fehlgeschlagenen
+        Backup
+      url: "/reference-storage-performance-degrades-after-failed-backup.html"
+    - title: SnapInfo Snapshot Kopien wurden gelöscht
+      url: "/reference-retention-of-snapinfo-snapshot-copies.html"
+    - title: Hoher Speicherverbrauch durch Antivirenlösung
+      url: "/reference-high-memory-consumption-caused-by-antivirus-solution.html"
+    - title: Der Speicherplatz, der beim Erstellen von zwei Snapshot Kopien für jedes
+        Backup verbraucht wird
+      url: "/reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html"
+    - title: SnapDrive SDDiscoveryFileSystemListInfo die Antwort ist beim Backup Null
+      url: "/reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.html"
+    - title: 'Fehler: VSS Requestor - Sicherungskomponenten fehlgeschlagen'
+      url: "/reference-error-vss-requestor-backup-components-failed.html"
+    - title: VSS Requestor - Sicherungskomponenten fehlgeschlagen. Eine erwartete
+        Festplatte ist nicht im System vorhanden
+      url: "/reference-error-vss-requestor-backup-components-failed-an-expected-disk-did-not-arrive-in-the-system.html"
+    - title: VSS Requestor - Sicherungskomponenten fehlgeschlagen mit partiellem Schreibfehler
+      url: "/reference-dataset-backup-might-fail-with-a-partial-writer-error.html"
+    - title: VSS gibt während der NAS-Sicherung Fehler gegen Microsoft iSCSI Target
+        VSS Hardware Provider aus
+      url: "/reference-vss-returns-errors-against-microsoft-iscsi-target-vss-hardware-provider-during-nas-backup.html"
+    - title: VSS Requestor - Sicherungskomponenten fehlgeschlagen. Fehler beim Aufruf
+        von „Snapshot-Satz beibehalten“.
+      url: "/reference-vss-requestor-backup-components-failed-failed-to-call-keep-snapshot-set.html"
+    - title: MBR LUNs werden in SnapManager für Hyper-V nicht unterstützt
+      url: "/reference-mbr-luns-unsupported-in-snapmanager-for-hyper-v.html"
+    - title: Die Sicherung schlägt fehl, nachdem Sie eine virtuelle Maschine aus Hyper-V
+        Manager entfernt haben
+      url: "/reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html"
+    - title: Einige Arten von Backup-Fehlern führen nicht zu einem teilweisen Backup-Fehler
+      url: "/reference-some-types-of-failures-do-not-generate-error-message.html"
+    - title: Fehler wiederherstellen nach dem Umbenennen des Storage-System-Volumes
+      url: "/reference-restore-failure-after-storage-system-volume-renaming.html"
+    - title: Wiederherstellung aus einem Backup nach Failback
+      url: "/reference-restore-from-a-backup-after-failback.html"
+    - title: Der Web Service Client-Kanal kann beim Aktualisieren des Datensatzes
+        auf den neuen Knoten keine Verbindung herstellen
+      url: "/reference-web-service-client-channel-unable-to-connect-while-updating-the-dataset-to-the-new-node.html"
+    - title: Datensätze werden nicht automatisch auf neue Knoten in einem Windows
+        Failover Cluster repliziert
+      url: "/reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html"
+    - title: Fehler 1935. Bei der Installation der Baugruppenkomponente ist ein Fehler
+        aufgetreten
+      url: "/reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html"
+    - title: Backup-Jobs, die mehr als 15 CSVs aus demselben Storage-System beinhalten,
+        könnten fehlschlagen
+      url: "/reference-backup-jobs-that-involve-more-than-15-csvs-from-the-same-filer-fail-with-rename-snapshot-error.html"
+    - title: Entweder sind die angegebenen VMs nicht vorhanden oder können nicht online
+        gesichert werden
+      url: "/reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html"
+    - title: Der erforderliche Hotfix KB2263829 kann auf einigen Plattformen nicht
+        installiert werden
+      url: "/reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html"
+    - title: Backup-Fehler mit dem Fehler „Shadow Copy Creation is already in progress“
+      url: "/reference-backup-fail-with-the-error-shadow-copy-creation-is-already-in-progress.html"
+  - title: Rechtliche Hinweise
+    url: "/legal-notices.html"

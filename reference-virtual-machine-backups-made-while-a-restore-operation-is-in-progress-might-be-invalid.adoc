@@ -1,0 +1,25 @@
+---
+permalink: reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html 
+sidebar: sidebar 
+keywords: virtual, machine, backup, restore, operation, progress, invalid 
+summary: Backups von virtuellen Maschinen, die während eines Wiederherstellungsvorgangs erstellt wurden, können ungültig sein. 
+---
+= Backups von virtuellen Maschinen, die während eines Wiederherstellungsvorgangs erstellt wurden, können ungültig sein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Ein applikationskonsistentes Backup, das während eines Wiederherstellungsvorgangs erstellt wurde, kann ungültig sein. Wenn Sie eine virtuelle Maschine aus diesem unvollständigen Backup wiederherstellen, führt dies zu Datenverlust und die virtuelle Maschine wird gelöscht.
+
+* *Ursache*
++
+Die Informationen zur Konfiguration von SnapManager für Hyper-V fehlen in der Backup-Kopie. Der Backup-Vorgang ist erfolgreich, die Backup-Kopie ist jedoch ungültig, da die Konfigurationsinformationen der virtuellen Maschine nicht enthalten sind. Bei den Wiederherstellungsvorgängen SnapManager für Hyper-V werden die Konfigurationsinformationen der virtuellen Maschine vor der Durchführung einer Wiederherstellung vom Hyper-V-Host gelöscht. Dieses Verhalten lässt sich im Microsoft Hyper-V Writer entwerfen.
+
+* *Korrekturmaßnahmen*
++
+Stellen Sie sicher, dass der Backup-Zeitplan nicht mit dem Wiederherstellungsvorgang übereinstimmt oder dass sich das On-Demand-Backup, das Sie durchführen möchten, nicht mit einem Wiederherstellungsvorgang für dieselben Daten überlappt.
+
+

@@ -1,0 +1,33 @@
+---
+permalink: concept-what-you-can-do-with-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, enable, back, up, restore, multiple, virtual, machine, automatic, backup, task, schedule, scheduling, dataset, retention, replication 
+summary: Mit SnapManager für Hyper-V können Sie mehrere Virtual Machines über mehrere Hosts hinweg sichern und wiederherstellen. Datensätze erstellen und Richtlinien anwenden, um Backup-Aufgaben wie Planung, Datenhaltung und Replizierung zu automatisieren. 
+---
+= Ihre Möglichkeiten mit SnapManager für Hyper-V
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit SnapManager für Hyper-V können Sie mehrere Virtual Machines über mehrere Hosts hinweg sichern und wiederherstellen. Datensätze erstellen und Richtlinien anwenden, um Backup-Aufgaben wie Planung, Datenhaltung und Replizierung zu automatisieren.
+
+Mit SnapManager für Hyper-V können Sie die folgenden Aufgaben ausführen:
+
+* Virtuelle Maschinen werden in Datensätzen zusammengefasst, die die gleichen Sicherungsanforderungen haben, und Richtlinien auf diese Datensätze anwenden
+* Führen Sie Backups und Restores dedizierter und geclusterter Virtual Machines auf Storage-Systemen mit ONTAP Software durch
+* Backup und Restore von Virtual Machines, die auf Cluster Shared Volumes (CSVs) gehostet sind
+* Automatisieren Sie Datensatz-Backups mithilfe von Planungsrichtlinien
+* Führen Sie On Demand-Backups der Datensätze durch
+* Bewahren Sie unter Verwendung von Aufbewahrungsrichtlinien Datensatz-Backups so lange auf, wie Sie sie benötigen
+* Aktualisieren des Zielorts für SnapMirror, nachdem ein Backup erfolgreich abgeschlossen wurde
+* Geben Sie benutzerdefinierte Skripts an, die vor oder nach einer Sicherung ausgeführt werden sollen
+* Wiederherstellung von Virtual Machines aus Backups
+* Überwachen Sie den Status aller geplanten und laufenden Jobs
+* Remote-Management von Hosts über eine Management-Konsole
+* Stellen Sie konsolidierte Berichte für Backup-, Restore- und Konfigurationsvorgänge für Datensätze bereit
+* Absturzkonsistente und applikationskonsistente Backups
+* Führen Sie Disaster Recovery-Vorgänge mit PowerShell cmdlets durch
+* Führen Sie Upgrades für das Cluster-Betriebssystem (OS) durch
+

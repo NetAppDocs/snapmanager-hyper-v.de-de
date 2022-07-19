@@ -1,0 +1,34 @@
+---
+permalink: task-add-policies.html 
+sidebar: sidebar 
+keywords: add, retention, schedule, scheduling, replication, policies, policy, script, dataset, data, protect 
+summary: Sie können Ihren Datensätzen Richtlinien zur Aufbewahrung, Planung und Replizierung sowie Skripte hinzufügen, um sie zu schützen. 
+---
+= Richtlinien hinzufügen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Ihren Datensätzen Richtlinien zur Aufbewahrung, Planung und Replizierung sowie Skripte hinzufügen, um sie zu schützen.
+
+Sie müssen die folgenden Informationen zur Verfügung haben:
+
+* Richtliniennamen und -Beschreibungen
+* Aufbewahrungsinformationen
+* Planungsdaten
+* Informationen zu Backup-Optionen
+* Informationen zum Backup-Skript
+
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Datensätze].
+. Wählen Sie den Datensatz aus, dem Sie Richtlinien hinzufügen möchten.
+. Klicken Sie im Bereich Aktionen auf *Richtlinie hinzufügen*.
++
+Der Assistent Create Policy wird angezeigt.
+
+. Führen Sie die Schritte im Assistenten aus, um Sicherungsrichtlinien für Ihren Datensatz zu erstellen.
+

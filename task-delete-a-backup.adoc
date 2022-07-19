@@ -1,0 +1,31 @@
+---
+permalink: task-delete-a-backup.html 
+sidebar: sidebar 
+keywords: delete, backup, associate, dataset, virtual, machine, deleting 
+summary: Sie können ein oder mehrere Backups löschen, die einem Datensatz oder einer virtuellen Maschine zugeordnet sind. 
+---
+= Löschen Sie ein Backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können ein oder mehrere Backups löschen, die einem Datensatz oder einer virtuellen Maschine zugeordnet sind.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf *Recovery*.
+. Wählen Sie die virtuelle Maschine im Datensatz aus, die das zu löschende Backup enthält.
++
+Wenn Sie ein Backup löschen, das mit einem Datensatz verknüpft ist, werden auch die Backups, die mit virtuellen Maschinen verbunden sind, die zu diesem Datensatz gehören, gelöscht. Wenn Sie ein Backup löschen, das einer virtuellen Maschine zugeordnet ist, wird nur dieses Backup gelöscht.
+
+. Wählen Sie im Fensterbereich Backups das Backup aus, das Sie löschen möchten.
+. Klicken Sie Auf *Löschen*.
++
+Das Dialogfeld *Sicherung löschen* wird angezeigt. Sie haben die Möglichkeit, Backups für eine ausgewählte VM oder für einen gesamten Datensatz zu löschen.
+
+. Wählen Sie die entsprechende Option aus, und klicken Sie auf *Löschen bestätigen*.
++
+Sie können den Status des Löschvorgangs für Backups im Statusfenster anzeigen.
+
+

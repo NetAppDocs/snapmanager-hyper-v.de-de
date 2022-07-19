@@ -1,0 +1,32 @@
+---
+permalink: reference-virtual-machine-adding-itself-to-a-dataset.html 
+sidebar: sidebar 
+keywords: virtual, machine, managing, manage, itself 
+summary: 'Wenn eine Virtual Machine (VM) zu einem Host gehört, auf dem SnapManager für Hyper-V installiert ist, und Sie SnapManager für Hyper-V auf dieser VM installieren, die als Managementkonsole verwendet werden soll, sollten Sie den Host, zu dem die VM gehört, nicht mit SnapManager für Hyper-V verwalten.' 
+---
+= Virtual Machine managt sich selbst.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Wenn eine Virtual Machine (VM) zu einem Host gehört, auf dem SnapManager für Hyper-V installiert ist, und Sie SnapManager für Hyper-V auf dieser VM installieren, die als Managementkonsole verwendet werden soll, sollten Sie den Host, zu dem die VM gehört, nicht mit SnapManager für Hyper-V verwalten.
+
+* *Ursache*
++
+SnapManager für Hyper-V auf einer Virtual Machine kann sich nicht selbst managen.
+
+* *Korrekturmaßnahmen*
++
+Keine Korrekturmaßnahme erforderlich.
+
+* *Beispiel*
++
+Wenn VM1 zu Host1 gehört (mit installiertem SnapManager für Hyper-V) und SnapManager für Hyper-V auf VM1 installiert ist, sollten Sie SnapManager for Hyper-V nicht verwenden, um Host1 von VM1 zu verwalten.
+
++
+Wenn Sie dies tun und versuchen, die VM selbst wiederherzustellen, wird die VM gelöscht oder vom Hyper-V Manager neu gestartet.
+
+

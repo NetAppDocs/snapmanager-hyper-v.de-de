@@ -1,0 +1,34 @@
+---
+permalink: reference-restore-from-a-backup-after-failback.html 
+sidebar: sidebar 
+keywords: restore, restoring, backup, failback 
+summary: Wiederherstellung aus einem Backup nach Failback 
+---
+= Wiederherstellung aus einem Backup nach Failback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Wenn Sie ein Failover und ein Failback durchführen, sind Sie vor dem Failover möglicherweise nicht in der Lage, die VMs an Ihrem primären Standort aus einem Backup wiederherzustellen, das am selben primären Standort erstellt wurde.
+
+* *Ursache*
++
+Bei der Überprüfung von Snapshot Kopien werden Volume GUIDs verwendet. Änderungen der GUIDs nach der Disaster Recovery.
+
+* *Korrekturmaßnahmen*
++
+Sie können die Option Snapshots überprüfen über PowerShell oder den Wiederherstellungsassistenten deaktivieren:
+
++
+** Deaktivieren Sie die Option „Snapshot-Überprüfung aktivieren“ auf der Seite *Wiederherstellungsoptionen* des Assistenten zur Wiederherstellung.
+** Stellen Sie mithilfe von PowerShell sicher, dass - `DisableVerifySnapshot` Der Parameter wurde angegeben.
+
+
+
+
+*Verwandte Informationen*
+
+xref:task-restore-a-virtual-machine-from-a-backup-copy.adoc[Wiederherstellen einer virtuellen Maschine aus einer Backup-Kopie]

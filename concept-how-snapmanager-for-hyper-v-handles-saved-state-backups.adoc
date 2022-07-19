@@ -1,0 +1,20 @@
+---
+permalink: concept-how-snapmanager-for-hyper-v-handles-saved-state-backups.html 
+sidebar: sidebar 
+keywords: default, behavior, snapmanager, hyper-v, backup, contain, virtual, machine, save, state, shut, down, saved-state 
+summary: Das Standardverhalten von SnapManager für Hyper-V besteht darin, dass Backups mit Virtual Machines, die sich im gespeicherten Zustand befinden, heruntergefahren oder ausfallen. Sie können ein Backup mit gespeicherter Status durchführen, indem Sie die Virtual Machines in einen Datensatz verschieben, der über eine Richtlinie verfügt, die gespeicherte Backups ermöglicht. 
+---
+= Wie SnapManager für Hyper-V gespeicherte Backups verarbeitet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Das Standardverhalten von SnapManager für Hyper-V besteht darin, dass Backups mit Virtual Machines, die sich im gespeicherten Zustand befinden, heruntergefahren oder ausfallen. Sie können ein Backup mit gespeicherter Status durchführen, indem Sie die Virtual Machines in einen Datensatz verschieben, der über eine Richtlinie verfügt, die gespeicherte Backups ermöglicht.
+
+Sie können auch Ihre Datensatzrichtlinie erstellen oder bearbeiten, um ein Backup von gespeicherten virtuellen Maschinen zu ermöglichen. Wenn Sie diese Option wählen, führt SnapManager für Hyper-V nicht zum Fehlschlagen des Backups, wenn der Hyper-V VSS Writer die virtuelle Maschine im gespeicherten Zustand sichert oder ein Offline-Backup der virtuellen Maschine durchführt. Die Durchführung eines gespeicherten Status- oder Offline-Backups kann jedoch zu Ausfallzeiten führen.
+
+*Verwandte Informationen*
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet: Hyper-V"]

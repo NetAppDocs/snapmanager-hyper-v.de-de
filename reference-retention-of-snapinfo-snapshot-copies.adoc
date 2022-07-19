@@ -1,0 +1,37 @@
+---
+permalink: reference-retention-of-snapinfo-snapshot-copies.html 
+sidebar: sidebar 
+keywords: delete, snapinfo, snapshot, copies, copy 
+summary: SnapInfo Snapshot Kopien wurden gelöscht. 
+---
+= SnapInfo Snapshot Kopien wurden gelöscht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+SnapManager für Hyper-V enthält keine SnapInfo Snapshot Kopien oder löscht sie.
+
+* *Ursache*
++
+Nach der Erstellung eines Datensatz-Backups erstellt SnapManager für Hyper-V eine Snapshot Kopie der SnapInfo LUN. SnapInfo Snapshot Kopien werden nicht gelöscht, wenn das Backup gelöscht wird. Standardmäßig werden 30 SnapInfo LUN Snapshot Kopien von SnapManager für Hyper-V aufbewahrt. So wird die älteste Kopie durch die neueste Kopie ersetzt, sobald der Schwellenwert für 30 Kopien überschritten wird.
+
+* *Korrekturmaßnahmen*
++
+Sie können die Anzahl der SnapInfo Snapshot Kopien konfigurieren, die Sie für jeden Hyper-V Host aufbewahren möchten, indem Sie einen der folgenden Registrierungsschlüssel verwenden:
+
++
+Für Standalone Hyper-V-Hosts: Key:
+
++
+`HKLM\SOFTWARE\NetApp\SnapManager for Hyper-V\Server\<hostname> DWORD value: snapinfo_snaps_count (number of SnapInfo Snapshot copies to be retained)`
+
++
+Für geclusterte Hyper-V Hosts (wird auf jedem Node im Cluster konfiguriert): Schlüssel:
+
++
+`HKLM\Cluster\SOFTWARE\NetApp\SnapManager for Hyper-V\Server\<clustername> DWORD value: snapinfo_snaps_count (number of SnapInfo Snapshot copies to be retained)`
+
+

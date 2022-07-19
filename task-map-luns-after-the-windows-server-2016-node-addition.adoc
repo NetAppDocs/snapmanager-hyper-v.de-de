@@ -1,0 +1,49 @@
+---
+permalink: task-map-luns-after-the-windows-server-2016-node-addition.html 
+sidebar: sidebar 
+keywords: perform, cluster, os, rolling, upgrade, procedure, unmap, lun, windows, r2, node, server, cluster, mixed, operating, system, map 
+summary: Wenn Sie ein Upgrade mit dem Cluster-Betriebssystem durchführen, können Sie das folgende Verfahren verwenden, um die LUNs vom Windows 2012 R2-Node aufzuheben und nach dem Hinzufügen zum Cluster den Node Windows Server 2016 neu zu zuordnen. 
+---
+= Zuordnen von LUNs im gemischten Betriebssystem-Modus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie ein Upgrade mit dem Cluster-Betriebssystem durchführen, können Sie das folgende Verfahren verwenden, um die LUNs vom Windows 2012 R2-Node aufzuheben und nach dem Hinzufügen zum Cluster den Node Windows Server 2016 neu zu zuordnen.
+
+Der Knoten Windows Server 2016 muss dem Cluster hinzugefügt werden.
+
+
+NOTE: Cluster Rolling Upgrade wird von Windows Server 2016 auf Windows Server 2019 unterstützt
+
+.Schritte
+. Loggen Sie sich bei ONTAP System Manager ein.
+. Wählen Sie die LUN aus, die Windows 2012 R2 zugeordnet wurde.
+. Klicken Sie auf *Bearbeiten* und wählen Sie *Initiatorgruppen*.
++
+image::mixed_os_mode_3.gif[Gemischter os-Modus 3]
+
+. Deaktivieren Sie die Initiatorgruppe des Node, der aus dem Cluster entfernt wurde.
+. Fügen Sie für alle neu hinzugefügten Windows 2016 Knoten eine neue Initiatorgruppe hinzu.
++
+image::mixed_os_mode_4.gif[Gemischter os-Modus 4]
+
+. Aktivieren Sie das Kontrollkästchen neben der neu erstellten Initiatorgruppe, um die LUN dem Windows 2016-Host zuzuordnen, der dem Cluster hinzugefügt wurde.
++
+image::mixed_os_mode_6.gif[Gemischter os-Modus 6]
+
+. Wiederholen Sie die Schritte 4 und 6, um jede LUN Windows 2016 Knoten zuzuordnen.
++
+Alle LUNs sollten auf dem Knoten Windows 2016 sichtbar sein.
+
+. Prüfen Sie die Festplatten aus dem Festplatten-Management-Tool in den Windows 2016 Knoten.
++
+image::mixed_os_mode_8.gif[Gemischter os-Modus 8]
+
+. Fügen Sie die Storage-Management-LIF in den neuen Windows 2016 SnapDrive Transport Protocol-Einstellungen (TPS) hinzu und aktualisieren Sie die Festplatten.
++
+image::mixed_os_mode_9.gif[Gemischter os-Modus 9]
+
+

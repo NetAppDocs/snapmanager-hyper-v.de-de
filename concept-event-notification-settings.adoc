@@ -1,0 +1,20 @@
+---
+permalink: concept-event-notification-settings.html 
+sidebar: sidebar 
+keywords: configure, configuring, event, notification, setting, send, e-mail, syslog, autosupport, message 
+summary: Sie können die Einstellungen für die Ereignisbenachrichtigung konfigurieren, um E-Mail-, Syslog- und AutoSupport-Meldungen zu senden, falls ein Ereignis eintritt. 
+---
+= Einstellungen für Ereignisbenachrichtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Einstellungen für die Ereignisbenachrichtigung konfigurieren, um E-Mail-, Syslog- und AutoSupport-Meldungen zu senden, falls ein Ereignis eintritt.
+
+Wenn die Ereignisbenachrichtigungs-Einstellungen nicht konfiguriert werden, wenn ein übergeordneter Hyper-V-Host zu SnapManager für Hyper-V hinzugefügt wird, können Sie diese Einstellungen später mithilfe des Konfigurationsassistenten konfigurieren.
+
+Sie können die Einstellungen für die Ereignisbenachrichtigung mithilfe des Konfigurationsassistenten ändern, auch wenn der Host zu SnapManager for Hyper-V hinzugefügt wurde
+
+Sie können die Einstellungen für Ereignisbenachrichtigungen konfigurieren, bevor Sie einem Datensatz Ressourcen für virtuelle Maschinen hinzufügen können.

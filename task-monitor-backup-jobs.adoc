@@ -1,0 +1,28 @@
+---
+permalink: task-monitor-backup-jobs.html 
+sidebar: sidebar 
+keywords: view, schedule, job, particular, dataset, management, window, schedule, tab, backup, monitor, backup 
+summary: Sie können die geplanten Backup-Jobs für einen bestimmten Datensatz anzeigen, indem Sie die Registerkarte „Jobs Management“ terminiert verwenden. Sie können auch die aktuell ausgeführten Backup- und Wiederherstellungsjobs über das Fenster Verwaltung der Jobs anzeigen. 
+---
+= Überwachen von Backup-Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die geplanten Backup-Jobs für einen bestimmten Datensatz anzeigen, indem Sie die Registerkarte Jobverwaltung Zeitplangemäß verwenden. Sie können auch die aktuell ausgeführten Backup- und Wiederherstellungsjobs über die Registerkarte Jobs Management windowRunning anzeigen.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf *Jobs*.
+. Klicken Sie entweder auf die Registerkarte *terminiert* oder auf die Registerkarte *running*.
+. Wählen Sie den geplanten oder ausgeführten Backupjob oder den Wiederherstellungsjob aus, den Sie überwachen möchten.
++
+Im Bereich Details werden Informationen zum Job angezeigt.
+
+. Verwenden Sie den Job-Bericht ausführen in der Ansicht *Berichte*, wenn Sie einen Live-Bericht eines laufenden Jobs anzeigen möchten.
++
+
+NOTE: Sie können auch Backup-Jobs mit der SCOM-Konsole von Microsoft überwachen. Weitere Informationen finden Sie auf der Microsoft-Website.
+
+

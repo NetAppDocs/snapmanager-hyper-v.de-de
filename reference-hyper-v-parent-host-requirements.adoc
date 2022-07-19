@@ -1,0 +1,54 @@
+---
+permalink: reference-hyper-v-parent-host-requirements.html 
+sidebar: sidebar 
+keywords: hyper-v, parent, host, physical, server, enable, contain, virtual, machine, snapmanager, requirement 
+summary: Übergeordnete Hyper-V Hosts sind physische Server, auf denen die Hyper-V-Rolle aktiviert ist. 
+---
+= Anforderungen für übergeordnete Hyper-V Hosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Übergeordnete Hyper-V Hosts sind physische Server, auf denen die Hyper-V-Rolle aktiviert ist. Hostserver, die Virtual Machines enthalten, werden zur Sicherung und Wiederherstellung zu SnapManager für Hyper-V hinzugefügt. Für die Installation und Ausführung aller SnapManager für Hyper-V Softwarekomponenten müssen Sie sicherstellen, dass die übergeordneten Hyper-V Hosts die Mindestanforderungen für Betriebssystem und Hyper-V erfüllen.
+
+* * Unterstützte Betriebssysteme*
++
+SnapManager für Hyper-V läuft auf folgenden Betriebssystemen:
+
++
+** Windows Server 2008 R2 SP1
+** Windows Server 2012 R2
+** Windows Server 2012
+** Windows Server 2016
+** Windows Server 2019
+
+
+* * Unterstützte Management-Konsole-Betriebssysteme*
++
+Die Management-Konsolen müssen die folgenden Betriebssysteme ausführen:
+
++
+** Windows Server 2008 R2 SP1
+** Windows Server 2012 R2
+** Windows Server 2012
+** Windows Server 2016
+** Windows Server 2019
+
+
+* *Hyper-V Anforderungen*
++
+Weitere Informationen finden Sie in der Microsoft TechNet Bibliothek unter Hyper-V erste Schritte.
+
+* *Unterstützung bei der Internationalisierung*
++
+SnapManager für Hyper-V wurde auf deutschen und japanischen Betriebssystemen getestet.
+
+
+
+*Verwandte Informationen*
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet: Hyper-V"]
+
+http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"]

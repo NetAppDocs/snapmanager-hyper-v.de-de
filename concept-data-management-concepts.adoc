@@ -1,0 +1,80 @@
+---
+permalink: concept-data-management-concepts.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, dataset, policies, policy, enable, group, virtual, machine, apply, rule, retention, data, management, concept 
+summary: SnapManager für Hyper-V verwendet Datensätze und Richtlinien, mit denen Sie Virtual Machines gruppieren und Regeln für diese Gruppen zuweisen können, um ihr Verhalten zu regeln. 
+---
+= Konzepte für das Datenmanagement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager für Hyper-V verwendet Datensätze und Richtlinien, mit denen Sie Virtual Machines gruppieren und Regeln für diese Gruppen zuweisen können, um ihr Verhalten zu regeln. Diese Information eignet sich in Szenarien, in denen Sie SnapManager für Hyper-V zum Planen eines Backups und zum Festlegen einer Aufbewahrungsrichtlinie für das Backup verwenden.
+
+* *Datensätze*
++
+Ein Datensatz ist eine Gruppe von Virtual Machines (VMs), über die Sie Daten mithilfe von Aufbewahrungsrichtlinien, Zeitplanungs- und Replizierungsrichtlinien sichern können. Datensätze können verwendet werden, um Virtual Machines zu gruppieren, die dieselben Sicherungsanforderungen haben. Eine VM kann Teil mehrerer Datensätze sein.
+
+* *Hyper-V Elternhosts*
++
+Übergeordnete Hyper-V Hosts sind physische Server, auf denen die Hyper-V-Rolle aktiviert ist. Hosts, die Virtual Machines enthalten, werden zu SnapManager für Hyper-V hinzugefügt, um die Daten zu sichern und wiederherzustellen. SnapManager für Hyper-V muss auf jedem übergeordneten Hyper-V Host installiert und ausgeführt werden.
+
+* *Ungeschützte Ressourcen*
++
+Ungesicherte Ressourcen sind Virtual Machines, die nicht Bestandteil eines Datensatzes sind. Diese Ressourcen können Sie schützen, indem Sie sie einem Datensatz hinzufügen.
+
+* *Virtuelle Maschinen*
++
+Eine virtuelle Maschine, die auf einem übergeordneten Hyper-V Host ausgeführt wird, ist eine Darstellung einer physischen Maschine mit eigenem Betriebssystem, eigenen Applikationen und eigener Hardware.
+
++
+SnapManager für Hyper-V verfolgt die global eindeutige Kennung oder die GUID der virtuellen Maschine und nicht den Namen der virtuellen Maschine. Wenn Sie eine virtuelle Maschine löschen, die von SnapManager für Hyper-V geschützt ist, und dann eine andere virtuelle Maschine mit demselben Namen erstellen, ist die neue virtuelle Maschine nicht geschützt, da sie eine andere GUID hat.
+
+* *Management-Konsolen*
++
+Verwaltungskonsolen sind Computer, auf denen SnapManager für Hyper-V installiert ist und als Client ausgeführt wird. Mit den Management-Konsolen können Sie SnapManager für Hyper-V Vorgänge auf einem übergeordneten Remote Hyper-V Host Remote managen.
+
+* *Planungsrichtlinien*
++
+Planungsrichtlinien weisen Backup-Jobs für bestimmte Zeiten zu, sodass Sie den Planungsprozess automatisieren können. Sie können mehrere Planungsrichtlinien hinzufügen, die für alle Virtual Machines gelten, die Datensatzmitglieder sind. SnapManager für Hyper-V erstellt geplante Aufgaben mithilfe des Windows Scheduler.
+
+* *Aufbewahrungsrichtlinien*
++
+Eine Aufbewahrungsrichtlinie ist die Art und Weise, wie Sie die Datensatz-Backup-Aufbewahrung in SnapManager für Hyper-V verwalten Die Aufbewahrungsrichtlinien bestimmen, wie lange ein Datensatz-Backup aufbewahrt werden soll, basierend auf einem bestimmten Zeitpunkt oder der Anzahl der Backup-Kopien.
+
++
+Die durch eine Aufbewahrungsrichtlinie festgelegten Grenzwerte stellen sicher, dass Ihre Daten-Backups keine Kompromisse hinsichtlich der zukünftigen Storage-Kapazität eingehen.
+
++
+In SnapManager für Hyper-V können Sie die folgenden Aufbewahrungszeiträume festlegen:
+
++
+** Eine Stunde
+** Einen Tag
+** Eine Woche
+** Einen Monat
+** Unbegrenzt
+
+
+
+
+
+NOTE: Sie können eine Aufbewahrungsfrist einmal pro Datensatz angeben.
+
+Nach Auswahl der Häufigkeit, mit der Datensatz-Backups gelöscht werden, können Sie entweder Backups löschen, die älter als ein bestimmter Zeitraum sind oder Backups, die eine maximale Summe überschreiten.
+
+Wenn Ihr System alte Backups enthält, überprüfen Sie Ihre Aufbewahrungsrichtlinien. Alle Objekte, die gesichert werden, die sich eine Snapshot Kopie teilen, müssen die Backup-Löschkriterien erfüllen, damit die Aufbewahrungsrichtlinie das Entfernen einer Snapshot Kopie auslösen kann.
+
+* *Replikationsrichtlinien*
++
+Eine Replizierungsrichtlinie legt fest, ob das SnapMirror Ziel nach einem erfolgreichen Backup-Vorgang aktualisiert wird. SnapManager für Hyper-V unterstützt nur Volume-basierten SnapMirror. Sie müssen eine SnapMirror Beziehung auf den beiden Storage-Systemen konfigurieren, bevor Sie ein SnapMirror Update durchführen. Dies ist sowohl für die Quelle als auch das Ziel erforderlich.
+
+
+
+*Verwandte Informationen*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368826["Data ONTAP 8.2 Datensicherheit Online Backup und Recovery Guide für 7-Mode"]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["NetApp Dokumentation: SnapDrive für Windows (aktuelle Versionen)"]

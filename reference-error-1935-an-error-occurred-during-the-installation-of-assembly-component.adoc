@@ -1,0 +1,25 @@
+---
+permalink: reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html 
+sidebar: sidebar 
+keywords: error, 1935, occur, installation, assembly, component 
+summary: Fehler 1935 
+---
+= Fehler 1935. Bei der Installation der Baugruppenkomponente ist ein Fehler aufgetreten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Nachricht*
++
+`Error 1935. An error occurred during the installation of assembly component \{2A030FEB-29B5-314B-97B5-ED38673CC885}. HRESULT: 0x80070BC9.`
+
+* *Beschreibung*
++
+Diese Meldung erscheint, wenn das Installationsprogramm für SnapManager für Hyper-V aufgrund eines nicht neu gestartet wird, nachdem Sie Microsoft Hotfixes installiert oder deinstalliert haben.
+
+* *Korrekturmaßnahmen*
++
+Starten Sie Ihren Computer neu, und führen Sie das SnapManager für Hyper-V-Installationsprogramm erneut aus.
+
+

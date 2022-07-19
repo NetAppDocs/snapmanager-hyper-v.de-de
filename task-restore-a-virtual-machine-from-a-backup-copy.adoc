@@ -1,0 +1,46 @@
+---
+permalink: task-restore-a-virtual-machine-from-a-backup-copy.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, restore, single, virtual, machine, vm, recover, lost, damage, data, backup, copy, restoring 
+summary: 'SnapManager für Hyper-V kann zur Wiederherstellung einer einzelnen Virtual Machine (VM) gleichzeitig verwendet werden, um verlorene oder beschädigte Daten aus einer Backup-Kopie wiederherzustellen.' 
+---
+= Wiederherstellen einer virtuellen Maschine aus einer Backup-Kopie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager für Hyper-V kann zur Wiederherstellung einer einzelnen Virtual Machine (VM) gleichzeitig verwendet werden, um verlorene oder beschädigte Daten aus einer Backup-Kopie wiederherzustellen.
+
+Sie müssen die folgenden Informationen zur Verfügung haben:
+
+* Backup-Name
+* Konfigurationsinformationen
+* Skriptinformationen
+
+
+Bei der Wiederherstellung auf einem alternativen Host sollte der CPU-Typ auf dem physischen Computer, auf dem sich Ihre ursprüngliche VM residierte, mit dem physischen Computer kompatibel sein, auf dem Sie die VM wiederherstellen möchten. Alternativ können Sie mit dem Hyper-V Manager angeben, dass die Maschine auf einer Maschine mit einem anderen CPU-Typ wiederhergestellt werden kann.
+
+Nach der Storage-Live-Migration können keine Daten aus dem letzten Backup wiederhergestellt werden.
+
+Wenn Sie einen Wiederherstellungsvorgang für eine Hyper-V Virtual Machine starten und eine weitere Backup- oder Wiederherstellungsfunktion derselben Virtual Machine ausgeführt wird, schlägt dies fehl.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf *Recovery*.
+. Wählen Sie die virtuelle Maschine aus, die Sie wiederherstellen möchten.
+. Wählen Sie im Fensterbereich Backups den Namen der Sicherungskopie aus, die Sie wiederherstellen möchten, und klicken Sie auf *Wiederherstellen*.
++
+Der Wiederherstellungsassistent wird angezeigt.
+
+. Führen Sie die Schritte im Assistenten aus, um die Backup-Kopie der virtuellen Maschine wiederherzustellen.
++
+Durch Schließen des Assistenten wird der Wiederherstellungsvorgang nicht abgebrochen. SnapManager for Hyper-V validiert die Konfiguration der virtuellen Maschine, bevor mit dem Wiederherstellungsvorgang begonnen wird. Wenn Änderungen an der Konfiguration der virtuellen Maschine vorgenommen wurden, wird eine Warnung angezeigt, die es Ihnen ermöglicht, den Vorgang fortzusetzen oder abzubrechen.
+
+
+
+Sie können den Status des Wiederherstellungsvorgangs im Fenster *Jobmanagement* anzeigen oder die Operationsergebnisse überprüfen, indem Sie den Bericht im Fenster *Berichte Management* anzeigen.
+
+*Verwandte Informationen*
+
+xref:reference-restore-from-a-backup-after-failback.adoc[Wiederherstellung aus einem Backup nach Failback]

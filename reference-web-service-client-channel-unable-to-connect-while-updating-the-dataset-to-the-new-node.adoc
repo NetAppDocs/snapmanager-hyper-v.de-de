@@ -1,0 +1,37 @@
+---
+permalink: reference-web-service-client-channel-unable-to-connect-while-updating-the-dataset-to-the-new-node.html 
+sidebar: sidebar 
+keywords: web, service, client, channel, unable, connect, update, updating, dataset, new, node 
+summary: Der Web Service Client-Kanal kann beim Aktualisieren des Datensatzes auf den neuen Knoten keine Verbindung herstellen. 
+---
+= Der Web Service Client-Kanal kann beim Aktualisieren des Datensatzes auf den neuen Knoten keine Verbindung herstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Wenn ein Webdienstclient nicht explizit gestartet wird, wird die Verbindung zu SnapManager für Hyper-V nicht hergestellt
+
+* *Ursache*
++
+SnapManager für Hyper-V startet einen Client-Channel für Webdienste nicht mehr automatisch. Wenn der Web Service Client-Kanal beim Aktualisieren eines Datensatzes auf einen neuen Knoten keine Verbindung herstellen kann, kann dies aus einem der folgenden Gründe liegen:
+
++
+** Webservices wurden nicht gestartet.
+** SnapManager für Hyper-V ist nicht installiert.
+** Der Web Services-Host ist nicht verfügbar.
+
+
+* *Korrekturmaßnahmen*
++
+Um dieses Verhalten zu korrigieren, stellen Sie sicher, dass Sie die folgenden Aufgaben ausgeführt haben:
+
++
+** Starten Sie Web Services.
+** Installieren Sie SnapManager für Hyper-V.
+** Starten Sie den Web Services-Host neu.
+
+
+

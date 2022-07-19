@@ -1,0 +1,43 @@
+---
+permalink: task-view-a-report.html 
+sidebar: sidebar 
+keywords: view, report, dataset, virtual, machine, resource, manage, snapmanager, hyper-v 
+summary: Sie können einen Bericht über einen Datensatz oder eine in SnapManager für Hyper-V gemanagte VM-Ressource anzeigen 
+---
+= Zeigt einen Datensatz-Bericht an
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können einen Bericht über einen Datensatz oder eine in SnapManager für Hyper-V gemanagte VM-Ressource anzeigen
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Berichte[Datasets].
+. Wählen Sie den Datensatz oder die virtuelle Maschine aus, die den Bericht enthält, den Sie anzeigen möchten.
+. Klicken Sie im Fensterbereich Berichte entweder auf die Registerkarte Backup oder auf die Registerkarte Recovery.
+. Wählen Sie den Bericht aus, den Sie anzeigen möchten, und klicken Sie auf *Bericht anzeigen*.
++
+|===
+| Wenn Sie ein... | Dann... 
+
+
+ a| 
+*Datensatz-Bericht*
+ a| 
+Sie können einen Backup-Bericht anzeigen.
+
+
+
+ a| 
+*Bericht virtueller Maschinen*
+ a| 
+Sie können sich entweder einen Backup- oder Recovery-Bericht anzeigen lassen.
+
+|===
++
+Der Bericht wird in einem separaten Fenster angezeigt.
+
+

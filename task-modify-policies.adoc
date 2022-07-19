@@ -1,0 +1,26 @@
+---
+permalink: task-modify-policies.html 
+sidebar: sidebar 
+keywords: modify, policies, policy, protect, dataset, wizard 
+summary: Sie können die Richtlinien, die Ihre Datensätze schützen, mit dem Assistenten zum Ändern von Richtlinien ändern. 
+---
+= Richtlinien ändern
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Richtlinien, die Ihre Datensätze schützen, mit dem Assistenten zum Ändern von Richtlinien ändern.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Datensätze].
+. Wählen Sie den Datensatz aus, der die Richtlinien enthält, die Sie ändern möchten.
+. Wählen Sie die Richtlinie aus, die Sie ändern möchten.
+. Klicken Sie im Aktionsbereich auf *Richtlinie ändern*.
++
+Der Assistent zum Ändern von Richtlinien wird angezeigt.
+
+. Führen Sie die Schritte im Assistenten aus, um die Schutzrichtlinie für Ihren Datensatz zu ändern.
+

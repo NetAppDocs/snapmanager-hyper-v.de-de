@@ -1,0 +1,71 @@
+---
+permalink: reference-requirements-for-restoring-a-virtual-machine.html 
+sidebar: sidebar 
+keywords: restore, virtual, machine, backup, copy, requirement 
+summary: Um eine virtuelle Maschine aus einer Sicherungskopie wiederherzustellen, müssen Sie zunächst festlegen, wie die Backup-Kopie wiederhergestellt werden soll. 
+---
+= Anforderungen für die Wiederherstellung einer virtuellen Maschine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um eine virtuelle Maschine aus einer Sicherungskopie wiederherzustellen, müssen Sie zunächst festlegen, wie die Backup-Kopie wiederhergestellt werden soll.
+
+
+
+== Name der VM-Backup-Kopie
+
+Sie müssen entscheiden, welche Sicherungskopie Sie wiederherstellen möchten.
+
+Alle Backup-Kopien werden im Backup-Bereich des Recovery Management-Fensters nach Namen aufgeführt.
+
+
+
+== Typ der VM-Backup-Kopie
+
+Das Wiederherstellen einer VM aus einem applikationskonsistenten Backup erfolgt in Abstimmung mit VSS. Hyper-V VSS Writer löscht die VM vor der Wiederherstellung und registriert die VM nach Abschluss der Wiederherstellung im Hyper-V Manager.
+
+Das Wiederherstellen einer VM aus einem Crash-konsistenten Backup erfordert keine VSS. Die VM wird vor dem Wiederherstellungsvorgang ausgeschaltet. Wenn Sie die Wiederherstellung nach einem absturzkonsistenten Backup durchführen, muss die VM bestehen. Das Wiederherstellen einer gelöschten VM aus einem absturzkonsistenten Backup schlägt fehl.
+
+
+
+== Status der VM-Backup-Kopien
+
+Sie müssen feststellen, ob die virtuelle Maschine noch vorhanden ist.
+
+Wenn die Virtual Machine nicht mehr vorhanden ist, können Sie sie weiterhin wiederherstellen, wenn die LUNs, auf denen die Virtual Machine erstellt wurde, noch vorhanden sind. Die LUNs müssen zum Zeitpunkt des Backups die gleichen Laufwerksbuchstaben und die Windows Volume GUIDs aufweisen.
+
+Wenn Sie eine Virtual Machine in Windows Server 2008 R2 löschen, können Sie die Virtual Machine aus einem applikationskonsistenten Backup wiederherstellen. In Windows Server 2012 und Windows Server 2012 R2 können Sie jedoch eine gelöschte Virtual Machine sowohl aus einem absturzkonsistenten Backup als auch aus einem applikationskonsistenten Backup wiederherstellen.
+
+Wenn die Virtual Machine vor dem Löschen aus allen Datensätzen entfernt wurde, können Sie sie dennoch wiederherstellen, indem Sie nicht geschützte Ressourcen auswählen und ein Backup auswählen, zu dem sie gehören.
+
+
+
+== Konfigurationsstatus der VM-Backup-Kopie
+
+Sie müssen feststellen, ob die Konfiguration der virtuellen Maschine zum Zeitpunkt des Backups identisch ist.
+
+Unterscheidet sich die Konfiguration der aktuellen Virtual Machine von dem zum Zeitpunkt des Backups, benachrichtigt Sie SnapManager für Hyper-V Sie, dass sich das Layout der virtuellen Maschine geändert hat, und fragt Sie, ob Sie die Konfiguration der virtuellen Maschine und die Daten, wie sie im Backup vorhanden waren, wiederherstellen möchten.
+
+
+NOTE: Da SnapManager für Hyper-V nicht die Cluster-Konfiguration der virtuellen Maschine gesichert, kann es nicht die Cluster-Konfiguration wiederherstellen. Bei einem Verlust der Virtual Machine- und Cluster-Konfiguration können Sie die Virtual Machine aus SnapManager für Hyper-V wiederherstellen, sie muss jedoch manuell verfügbar gemacht werden.
+
+Wenn die virtuelle Maschine anders als die aktuelle Konfiguration der virtuellen Maschine im Backup konfiguriert ist, müssen Sie möglicherweise die Clusterkonfiguration aktualisieren, um alle neu hinzugefügten oder entfernten virtuellen Festplatten (VHDs) wiederzugeben.
+
+
+
+== Der Status der Snapshot Kopie
+
+Sie können überprüfen, ob die Backup-Snapshot-Kopien auf dem Speichersystem vorhanden sind, bevor Sie den Wiederherstellungsvorgang durchführen.
+
+
+
+== VM-Neustart
+
+Sie können die Virtual Machine starten, nachdem sie wiederhergestellt wurde.
+
+*Verwandte Informationen*
+
+http://technet.microsoft.com/library/ff182338(v=WS.10).aspx["Microsoft TechNet: Failover-Cluster in Windows Server 2008 R2"]

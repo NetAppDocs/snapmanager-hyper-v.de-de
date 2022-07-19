@@ -1,0 +1,22 @@
+---
+permalink: task-restore-the-original-configuration-for-clustered-hosts.html 
+sidebar: sidebar 
+keywords: vm, backed, up, primary, storage, system, return, origin, configuration, snapmirror, relationship, secondary, primary, restoring 
+summary: Nachdem die VMs auf dem primären Storage-System gesichert wurden, können Sie anhand einer SnapMirror Beziehung zurück zur ursprünglichen Konfiguration zurückkehren. Diese Beziehung besteht aus dem primären Storage-System und dem sekundären Storage-System. 
+---
+= Wiederherstellung der Originalkonfiguration für Cluster-Hosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem die VMs auf dem primären Storage-System gesichert wurden, können Sie anhand einer SnapMirror Beziehung zurück zur ursprünglichen Konfiguration zurückkehren. Diese Beziehung besteht aus dem primären Storage-System und dem sekundären Storage-System.
+
+.Schritte
+. Offline die Konfigurationsressource der virtuellen Maschine und die virtuelle Maschine für alle VMs.
+. Löschen Sie diese Ressourcen aus dem Cluster.
+. Löschen Sie alle VMs aus Hyper-V Manager.
+. Trennen Sie alle Festplatten mit SnapDrive.
+. Synchronisieren Sie die SnapMirror Beziehung vom primären Speichersystem zum sekundären Storage-System neu.
+

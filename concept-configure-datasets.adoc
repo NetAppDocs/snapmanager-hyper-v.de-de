@@ -1,0 +1,14 @@
+---
+permalink: concept-configure-datasets.html 
+sidebar: sidebar 
+keywords: create, modify, view, delete, dataset, protection, configure, configuring 
+summary: Datensätze lassen sich je nach Sicherungsanforderungen erstellen, ändern, anzeigen und löschen. 
+---
+= Datensätze konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Datensätze lassen sich je nach Sicherungsanforderungen erstellen, ändern, anzeigen und löschen.

@@ -1,0 +1,56 @@
+---
+permalink: reference-requirements-for-remote-host-install.html 
+sidebar: sidebar 
+keywords: remote, host, install, wizard, snapmanager, hyper-v, host, node, require, detail, requirement 
+summary: Bevor Sie den Installationsassistenten für Remote-Hosts verwenden, um SnapManager für Hyper-V auf einem Host oder Knoten Remote zu installieren, müssen Sie die erforderlichen Host-Details erfassen. 
+---
+= Anforderungen für die Verwendung des Assistenten für die Installation von Remote-Hosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bevor Sie den Installationsassistenten für Remote-Hosts verwenden, um SnapManager für Hyper-V auf einem Host oder Knoten Remote zu installieren, müssen Sie die erforderlichen Host-Details erfassen.
+
+Sie können über das Fenster Aktionen im Fenster Schutz auf den Assistenten für die Installation von Remote-Hosts zugreifen. Sie können SnapManager für Hyper-V per Fernzugriff auf Standalone- und Cluster Nodes oder Hosts installieren oder deinstallieren.
+
+Wenn Sie einen Host hinzufügen, der nicht über SnapManager für Hyper-V verfügt, werden Sie im Assistenten zum Hinzufügen von Hosts aufgefordert, ihn auf dem Host zu installieren.
+
+* *Installieren oder Deinstallieren*
++
+Sie müssen entscheiden, ob Sie mit dem Assistenten SnapManager for Hyper-V Remote auf Hosts oder Nodes installieren oder deinstallieren möchten.
+
+* * Pro Server oder pro Speicher*
++
+Sie müssen entscheiden, ob SnapManager für Hyper-V pro Server oder pro Storage installiert werden soll.
+
+* *Hostname/IP*
++
+Sie müssen den Namen oder die IP-Adresse des Hosts angeben, auf dem Sie SnapManager für Hyper-V installieren möchten Sie können *Durchsuchen...* auswählen, um nach dem Host oder Knoten zu suchen.
+
+* *Port*
++
+Sie müssen die Portnummer angeben, um eine Verbindung zum Host oder Node herzustellen.
+
+* *SMHV-Lizenzschlüssel*
++
+Sie müssen den Lizenzschlüssel für SnapManager für Hyper-V angeben.
+
+* *SDW Lizenzschlüssel*
++
+Sie müssen den Lizenzschlüssel für SnapDrive für Windows angeben.
+
+* *Benutzername*
++
+Sie müssen den Benutzernamen auf Host- oder Node-Administratorebene unter Verwendung des Formats _Domain\username_ angeben.
+
+* *Passwort*
++
+Sie müssen das Host- oder Node-Passwort eingeben.
+
+* *Passwort Bestätigen*
++
+Zur Bestätigung müssen Sie das Host- oder Node-Passwort erneut eingeben.
+
+

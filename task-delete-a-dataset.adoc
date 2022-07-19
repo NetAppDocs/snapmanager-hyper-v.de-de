@@ -1,0 +1,28 @@
+---
+permalink: task-delete-a-dataset.html 
+sidebar: sidebar 
+keywords: delete, dataset, protection, change, deleting 
+summary: Wenn sich Ihre Sicherungsanforderungen ändern, können Sie einen Datensatz löschen. 
+---
+= Löschen Sie einen Datensatz
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn sich Ihre Sicherungsanforderungen ändern, können Sie einen Datensatz löschen.
+
+Durch das Löschen eines Datensatzes werden nicht die virtuellen Maschinen gelöscht, die zum Datensatz gehören. Nach dem Löschen des Datensatzes werden die Virtual Machines, die zu diesem Datensatz gehören, unprotected, wenn sie nicht zu einem anderen Datensatz gehören.
+
+.Schritte
+. Klicken Sie im Navigationsbereich auf Menü:Schutz[Datensätze].
+. Wählen Sie den Datensatz aus, den Sie löschen möchten.
+. Klicken Sie im Bereich Aktionen auf *Löschen* und klicken Sie auf *OK*, um den Datensatz zu löschen.
++
+Durch das Löschen des Datensatzes werden auch die geplanten Jobs von allen Hosts gelöscht, die Mitglieder des Datensatzes sind. SnapManager für Hyper-V managt nicht mehr die Aufbewahrung von Backups beim Löschen des Datensatzes, auch wenn er mit demselben Namen neu erstellt wird.
+
+
+
+SnapManager für Hyper-V schützt nicht mehr die Ressourcen, die mit dem gelöschten Datensatz verbunden sind, es sei denn, diese Ressourcen gehören zu einem anderen Datensatz.

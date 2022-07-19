@@ -1,0 +1,38 @@
+---
+permalink: reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html 
+sidebar: sidebar 
+keywords: space, consumption, snapshot, copies, copy, backup 
+summary: Der Speicherplatz, der beim Erstellen von zwei Snapshot Kopien für jedes Backup verbraucht wird. 
+---
+= Der Speicherplatz, der beim Erstellen von zwei Snapshot Kopien für jedes Backup verbraucht wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Ausgabe*
++
+Für jedes Backup mit Hyper-V Objekten werden zwei Snapshot Kopien erstellt, was zu Bedenken hinsichtlich des Speicherverbrauchs führen kann.
+
++
+
+NOTE: Dies gilt nur für applikationskonsistente Backups.
+
+* *Ursache*
++
+Microsoft Hyper-V VSS Writer erstellt sowohl VM- als auch applikationskonsistente Backup-Kopien innerhalb der VMs, wobei die Applikationen auf VHDs residieren. Zur Erstellung von Software- und VM-konsistenten Backup-Kopien verwendet VSS den nativen autorecovery-Prozess, der die VM auf einen Zustand festlegt, der mit der Snapshot Kopie der Software konsistent ist. Hyper-V VSS Writer kontaktiert jede VM im Backup und erstellt eine Software-konsistente Snapshot Kopie.
+
++
+Nach der Erstellung der Snapshot Kopien erstellt die übergeordnete Partition eine VSS Snapshot-Kopie der gesamten Festplatte (LUN), die die VMs beherbergt. Nachdem die Snapshot Kopie der übergeordneten Partition erstellt wurde, muss VSS die zuvor erstellte übergeordnete Partition mounten und jede der VMs zurück in den Software-konsistenten Status verschieben. Alle Änderungen, die nach der Erstellung der Snapshot Software-Kopie auf den VMs vorgenommen wurden, werden entfernt. Diese Änderungen an den VHDs müssen dauerhaft vorgenommen werden. Da diese Snapshot Kopien standardmäßig schreibgeschützt sind, muss eine neue Snapshot Kopie angefertigt werden, um die aktualisierten Kopien der VHDs aufzubewahren. Aus diesem Grund wird eine zweite Snapshot Kopie des Volume erstellt. Diese Snapshot-Kopie wird mit dem Suffix *_Backup* gekennzeichnet und ist die Backup-Kopie, die bei Restore-Vorgängen verwendet wird.
+
+* *Korrekturmaßnahmen*
++
+Die beiden Snapshot Kopien werden als Paar betrachtet. Wenn der Aufbewahrungszeitraum für das Backup endet, werden beide Snapshot Kopien gelöscht. Die erste Snapshot Kopie sollten Sie nicht manuell löschen, da sie für Wiederherstellungen erforderlich ist.
+
++
+Microsoft VSS unterstützt die Sicherung von VMs nur auf dem Host, dem das Cluster Shared Volume (CSV) gehört. Dadurch lassen sich die CSV-Eigentumsrechte zwischen den Nodes verschieben, um Backups der VMs auf jedem Host im Cluster zu erstellen.
+
++
+Bei der Sicherung von CSV erstellt SnapManager für Hyper-V pro Host im Cluster zwei Snapshot Kopien, auf denen eine VM über diesen CSV läuft. Das heißt, wenn Sie 15 VMs auf einem einzelnen CSV sichern und diese VMs gleichmäßig auf drei Hyper-V Server aufgeteilt sind, gibt es insgesamt sechs Snapshot-Kopien pro Backup.
+
+

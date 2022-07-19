@@ -1,0 +1,54 @@
+---
+permalink: concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: create, monitor, on-demand, backup, manage, schedule, snapmanager, hyper-v, creating, managing, application, crash 
+summary: Sie können On-Demand-Backups erstellen und überwachen oder geplante Backups in SnapManager für Hyper-V. 
+---
+= Erstellen und Managen von Backup-Jobs in SnapManager für Hyper-V
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können On-Demand-Backups erstellen und überwachen oder geplante Backups in SnapManager für Hyper-V. Darüber hinaus können Sie mit SnapManager für Hyper-V zwei Arten von Backup-Jobs ausführen: Applikationskonsistent und absturzkonsistent.
+
+
+
+== Über SnapManager für Hyper-V Backups
+
+Sie können On-Demand-Backup-Jobs erstellen und sie nach Wunsch ausführen oder mithilfe von Richtlinien, die mit Datensätzen verknüpft sind, geplante Backup-Jobs erstellen. Ein On-Demand-Backup kann Aufbewahrungsrichtlinien und Replizierungsrichtlinien sowie Skripte umfassen, die vor und nach dem Backup ausgeführt werden. Sie können Richtlinien, aus denen geplante Backup-Jobs besteht, erstellen, ändern, anzeigen und löschen.
+
+
+
+== Arten von Backup-Jobs SnapManager für Hyper-V können durchführen
+
+Mit SnapManager für Hyper-V können zwei Arten von Backup-Jobs ausgeführt werden: Applikationskonsistent und absturzkonsistent.
+
+
+
+== Applikationskonsistente Backup-Jobs
+
+Applikationskonsistente Backup-Jobs sind gründlich, zuverlässig und ressourcenintensiv. Sie werden in Abstimmung mit dem Microsoft Volume Shadow Copy Service (VSS) ausgeführt, um zu gewährleisten, dass jede auf der VM laufende Applikation vor der Erstellung einer Snapshot Kopie stillgelegt wird. Diese Backup-Methode garantiert die Konsistenz der Applikationsdaten. Damit können VMs und die auf ihnen ausgeführten Applikationen wiederhergestellt werden. Applikationskonsistente Backup-Jobs sind jedoch zeitaufwändig und können komplex sein.
+
+
+
+== Absturzkonsistente Backup-Jobs
+
+Absturzkonsistente Backup-Jobs sind schnelle Snapshot-Kopien aller LUNs, die von VMs verwendet werden, die in einem Datensatz involviert sind. Die daraus resultierenden Backup-Kopien ähneln den Datenerfassungen von VMs, die abstürzen oder anderweitig abrupt abgeschaltet werden. Absturzkonsistente Backup-Jobs bieten eine schnelle Möglichkeit, Daten zu erfassen. Die VMs müssen jedoch vorhanden sein, um aus einem absturzkonsistenten Backup wiederhergestellt werden zu können. Absturzkonsistente Backup-Jobs sollen keine applikationskonsistenten Backup-Aufgaben ersetzen.
+
+
+
+== Backup-Anforderungen und Einschränkungen für SnapManager for Hyper-V
+
+Sie sollten die Anforderungen und Einschränkungen eines SnapManager für Hyper-V Backups kennen:
+
+* Backup- und Restore-Vorgänge werden nicht unterstützt, wenn Sie einen Switchover- oder Switchback-Vorgang in einer MetroCluster-Konfiguration durchführen. Wenn gleichzeitig ein Backup- und Restore-Betrieb und ein Switchover- oder Switchover-Back-Vorgang ausgeführt werden, wird das angezeigt `.vhd` Das Dateiformat einer VM könnte sich in ändern `.avhdx` Unter Windows Server 2012 R2. Die VM ist von dieser Änderung nicht betroffen.
+* Der `distributed application-consistent backup` Mit der Option können mehrere VMs, die auf den Partner-Cluster-Nodes ausgeführt werden, in einer einzigen Snapshot-Kopie, die vom Backup-Node erstellt wurde, konsistent sein. Diese Option wird für alle VMs unterstützt, die auf einem Windows-Volume mit CSV 2.0 über mehrere Knoten in einem Windows Failover Cluster ausgeführt werden.
+* Im 7-Mode erstellen applikationskonsistente Backup-Jobs den VSS Hardware Provider zwei Snapshot Kopien. Die Snapshot-Kopien werden aufgerufen `snapshot_name` Und `snapshot_name_backup`. Die beiden Snapshot-Kopien werden erstellt, um die automatische Wiederherstellung während des VSS-Backups zu erleichtern.
+* In geclusterten Umgebungen benötigen applikationskonsistente Backups nur eine Snapshot Kopie für den automatischen Recovery-Prozess. SIS Klone werden für die automatische Wiederherstellung genutzt, und nach Abschluss der automatischen Recovery wird die erste Snapshot Kopie erstellt (`snapshot_name`) Wurde gelöscht.
+* Jedes Windows-Volume in der VM muss über mindestens 300 MB freien Speicherplatz verfügen. Dies umfasst die Windows Volumes für VHDs, iSCSI LUNs und Pass-Through-Festplatten, die mit der VM verbunden sind.
+* Ein absturzkonsistenter Backup-Job erstellt immer nur eine Snapshot-Kopie. Es verfügt nicht über VSS-Integration.
+* Mehrere absturzkonsistente Backup-Jobs können parallel ausgeführt werden. Ein absturzkonsistenter Backup-Job kann parallel mit einem applikationskonsistenten Backup-Job ausgeführt werden.
+* `Allow Saved State Backup` Gilt nicht für absturzkonsistente Backup-Aufgaben.
+

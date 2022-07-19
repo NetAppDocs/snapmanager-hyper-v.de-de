@@ -1,0 +1,22 @@
+---
+permalink: concept-perform-a-cluster-os-rolling-upgrade.html 
+sidebar: sidebar 
+keywords: cluster, operating, system, os, rolling, upgrade, snapmanager, perform, reducing, reduce, downtime 
+summary: 'Sie können ein Upgrade des Betriebssystems (Cluster-Betriebssystem) durchführen, um das Betriebssystem der Cluster-Nodes zu aktualisieren, ohne SnapManager für Hyper-V zu beenden Diese Funktion unterstützt SLA-Compliance durch Reduzierung von Ausfallzeiten.' 
+---
+= Führen Sie ein Rolling Upgrade des Cluster-Betriebssystems durch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können ein Upgrade des Betriebssystems (Cluster-Betriebssystem) durchführen, um das Betriebssystem der Cluster-Nodes zu aktualisieren, ohne SnapManager für Hyper-V zu beenden Diese Funktion unterstützt SLA-Compliance durch Reduzierung von Ausfallzeiten.
+
+Failover Cluster, die SnapManager für Hyper-V ausführen, können ohne Ausfallzeiten von Windows Server 2012 R2 auf Windows Server 2016 und Windows Server 2019 aktualisiert werden.
+
+Informationen zu den Vorteilen für Rolling Upgrade unter Cluster OS, Installationsprozess und Einschränkungen finden Sie in den entsprechenden Informationen.
+
+*Verwandte Informationen*
+
+https://docs.microsoft.com/en-us/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade["Microsoft TechNet: Rolling-Upgrade für das Cluster-Betriebssystem"]
