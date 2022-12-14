@@ -20,6 +20,7 @@ Auf der Registerkarte „Virtual Machine“ und der Registerkarte „VHD“ im F
 . Wählen Sie die entsprechende virtuelle Maschine aus.
 
 
+.Ergebnisse
 Auf der Registerkarte Virtual Machine werden Name, GUID und Status der ausgewählten virtuellen Maschine angezeigt.
 
 Auf der Registerkarte VHD werden Systemfestplatte, Bereitstellungspunkt, VHD full Path, LUN Path, Storage-System-Name, angezeigt. Seriennummer und Volume-Name, der der ausgewählten virtuellen Maschine zugeordnet ist.

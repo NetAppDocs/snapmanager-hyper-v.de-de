@@ -14,6 +14,7 @@ summary: Wenn sich Ihre Sicherungsanforderungen ändern, können Sie einen Daten
 [role="lead"]
 Wenn sich Ihre Sicherungsanforderungen ändern, können Sie einen Datensatz löschen.
 
+.Über diese Aufgabe
 Durch das Löschen eines Datensatzes werden nicht die virtuellen Maschinen gelöscht, die zum Datensatz gehören. Nach dem Löschen des Datensatzes werden die Virtual Machines, die zu diesem Datensatz gehören, unprotected, wenn sie nicht zu einem anderen Datensatz gehören.
 
 .Schritte
@@ -25,4 +26,5 @@ Durch das Löschen des Datensatzes werden auch die geplanten Jobs von allen Host
 
 
 
+.Ergebnisse
 SnapManager für Hyper-V schützt nicht mehr die Ressourcen, die mit dem gelöschten Datensatz verbunden sind, es sei denn, diese Ressourcen gehören zu einem anderen Datensatz.

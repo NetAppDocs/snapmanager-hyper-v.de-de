@@ -13,6 +13,7 @@ summary: Nachdem Sie ein Rolling Upgrade des Cluster-OS durchgeführt haben, mü
 [role="lead"]
 Nachdem Sie ein Rolling Upgrade des Cluster-OS durchgeführt haben, müssen Sie den Datensatz und SnapInfo über alle Nodes hinweg aktualisieren.
 
+.Was Sie benötigen
 ++++
 
 

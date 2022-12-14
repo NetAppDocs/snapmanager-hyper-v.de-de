@@ -14,6 +14,7 @@ summary: Nachdem Sie einen Datensatz erstellt haben, können Sie die Datensatzbe
 [role="lead"]
 Nachdem Sie einen Datensatz erstellt haben, können Sie die Datensatzbeschreibung und die dem Datensatz zugeordneten Ressourcen ändern.
 
+.Über diese Aufgabe
 Das Kontrollkästchen Datensatz validieren ist standardmäßig aktiviert. SnapManager für Hyper-V überprüft während der Erstellung oder Änderung eines Datensatzes auf Konfigurationsfehler in allen VMs. Sie müssen sicherstellen, dass das Kontrollkästchen nicht aktiviert ist, wenn Sie die Validierung des Datensatzes nicht aktivieren möchten.
 
 .Schritte

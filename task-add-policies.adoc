@@ -14,6 +14,7 @@ summary: Sie können Ihren Datensätzen Richtlinien zur Aufbewahrung, Planung un
 [role="lead"]
 Sie können Ihren Datensätzen Richtlinien zur Aufbewahrung, Planung und Replizierung sowie Skripte hinzufügen, um sie zu schützen.
 
+.Was Sie benötigen
 Sie müssen die folgenden Informationen zur Verfügung haben:
 
 * Richtliniennamen und -Beschreibungen

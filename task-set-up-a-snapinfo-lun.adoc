@@ -14,6 +14,7 @@ summary: Sie müssen eine SnapInfo LUN in SnapManager für Hyper-V hinzufügen, 
 [role="lead"]
 Sie müssen eine SnapInfo LUN in SnapManager für Hyper-V hinzufügen, um die Datensatz-Backup-Metadaten zu speichern. Der SnapInfo Pfad muss sich auf einer ONTAP LUN befinden, da SnapManager für Hyper-V nach einem regelmäßigen Backup ein Backup der SnapInfo Kopie erstellt.
 
+.Was Sie benötigen
 Der SnapInfo-Pfad kann sich auf einem Cluster Shared Volume (CSV) befinden, wenn Sie ein Windows Server 2012 Cluster ausführen. Wenn Sie dedizierte Virtual Machines managen, muss sich der SnapInfo-Standort auf eine dedizierte ONTAP LUN befinden. Wenn Sie gemeinsam genutzte Virtual Machines managen, muss der SnapInfo-Speicherort auf eine gemeinsam genutzte ONTAP LUN liegen.
 
 .Schritte
@@ -35,6 +36,7 @@ Der SnapInfo-Pfad kann sich auf einem Cluster Shared Volume (CSV) befinden, wenn
 
 
 
+.Ergebnisse
 Bei Ausführung des Konfigurationsassistenten werden die SnapInfo Konfigurationseinstellungen auf alle Nodes im Cluster repliziert. *Verwandte Informationen*
 
 xref:reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.adoc[Fehler: SnapDrive SDDiscoveryFileSystemListInfo Antwort ist Null]

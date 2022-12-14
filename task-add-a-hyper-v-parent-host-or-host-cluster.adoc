@@ -19,6 +19,7 @@ Sie können einen übergeordneten Hyper-V-Host oder ein Host-Cluster hinzufügen
 . Führen Sie den Assistenten * Host hinzufügen* aus.
 
 
+.Nachdem Sie fertig sind
 Wenn Sie einem Cluster einen Host hinzufügen, werden die Informationen über den neuen Host nicht automatisch in der GUI angezeigt. Fügen Sie die Hostinformationen manuell der XML-Datei im Installationsverzeichnis hinzu.
 
 SnapManager für Hyper-V muss auf jedem Cluster-Knoten installiert sein. Wenn SnapManager für Hyper-V nicht installiert ist, werden Sie aufgefordert, den Assistenten zur Installation von Remote-Hosts auszuführen.

@@ -14,6 +14,7 @@ summary: Ein On-Demand-Backup eines Datensatzes ist möglich.
 [role="lead"]
 Ein On-Demand-Backup eines Datensatzes ist möglich.
 
+.Was Sie benötigen
 Sie müssen die folgenden Informationen zur Verfügung haben:
 
 * Name und Beschreibung der Sicherung
@@ -35,4 +36,5 @@ Durch das Schließen des Assistenten wird das Backup bei Bedarf nicht abgebroche
 
 
 
+.Ergebnisse
 Sie können den Status der On-Demand-Sicherung im Fenster Jobverwaltung anzeigen.

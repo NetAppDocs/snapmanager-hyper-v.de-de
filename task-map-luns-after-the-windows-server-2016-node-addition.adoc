@@ -13,6 +13,7 @@ summary: Wenn Sie ein Upgrade mit dem Cluster-Betriebssystem durchführen, könn
 [role="lead"]
 Wenn Sie ein Upgrade mit dem Cluster-Betriebssystem durchführen, können Sie das folgende Verfahren verwenden, um die LUNs vom Windows 2012 R2-Node aufzuheben und nach dem Hinzufügen zum Cluster den Node Windows Server 2016 neu zu zuordnen.
 
+.Was Sie benötigen
 Der Knoten Windows Server 2016 muss dem Cluster hinzugefügt werden.
 
 

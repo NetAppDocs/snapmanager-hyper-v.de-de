@@ -13,6 +13,7 @@ summary: Für die Wiederherstellung nach einem Notfall muss SnapManager für Hyp
 [role="lead"]
 Für die Wiederherstellung nach einem Notfall muss SnapManager für Hyper-V zuerst ein Failover auf ein sekundäres Storage-System durchführen. Im Failover-Fall sind mehrere manuelle Schritte in PowerShell erforderlich.
 
+.Über diese Aufgabe
 Die meisten Backups können sowohl für NAS als auch für SAN auf einem alternativen Host wiederhergestellt werden. Absturzkonsistente Backups von Windows Server 2008 R2 können jedoch nicht auf einem anderen Host wiederhergestellt werden.
 
 .Schritte

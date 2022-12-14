@@ -13,6 +13,7 @@ summary: Obwohl Sie einen Host von nur einer Verwaltungskonsole aus verwalten so
 [role="lead"]
 Obwohl Sie einen Host von nur einer Verwaltungskonsole aus verwalten sollten, können Sie Host- und Datensatzkonfigurationsinformationen von einer Remote Management-Konsole auf eine andere importieren und exportieren, um die Datenkonsistenz zu gewährleisten.
 
+.Über diese Aufgabe
 Sie sollten Konfigurationsinformationen nicht in das Verzeichnis importieren oder exportieren, auf dem SnapManager für Hyper-V installiert ist. Wenn Sie SnapManager für Hyper-V deinstallieren, geht diese Datei verloren.
 
 

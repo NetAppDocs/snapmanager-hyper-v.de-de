@@ -13,6 +13,7 @@ summary: 'SnapManager für Hyper-V kann zur Wiederherstellung einer einzelnen Vi
 [role="lead"]
 SnapManager für Hyper-V kann zur Wiederherstellung einer einzelnen Virtual Machine (VM) gleichzeitig verwendet werden, um verlorene oder beschädigte Daten aus einer Backup-Kopie wiederherzustellen.
 
+.Was Sie benötigen
 Sie müssen die folgenden Informationen zur Verfügung haben:
 
 * Backup-Name
@@ -22,6 +23,7 @@ Sie müssen die folgenden Informationen zur Verfügung haben:
 
 Bei der Wiederherstellung auf einem alternativen Host sollte der CPU-Typ auf dem physischen Computer, auf dem sich Ihre ursprüngliche VM residierte, mit dem physischen Computer kompatibel sein, auf dem Sie die VM wiederherstellen möchten. Alternativ können Sie mit dem Hyper-V Manager angeben, dass die Maschine auf einer Maschine mit einem anderen CPU-Typ wiederhergestellt werden kann.
 
+.Über diese Aufgabe
 Nach der Storage-Live-Migration können keine Daten aus dem letzten Backup wiederhergestellt werden.
 
 Wenn Sie einen Wiederherstellungsvorgang für eine Hyper-V Virtual Machine starten und eine weitere Backup- oder Wiederherstellungsfunktion derselben Virtual Machine ausgeführt wird, schlägt dies fehl.
@@ -39,6 +41,7 @@ Durch Schließen des Assistenten wird der Wiederherstellungsvorgang nicht abgebr
 
 
 
+.Nachdem Sie fertig sind
 Sie können den Status des Wiederherstellungsvorgangs im Fenster *Jobmanagement* anzeigen oder die Operationsergebnisse überprüfen, indem Sie den Bericht im Fenster *Berichte Management* anzeigen.
 
 *Verwandte Informationen*

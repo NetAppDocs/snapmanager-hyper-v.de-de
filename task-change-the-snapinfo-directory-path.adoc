@@ -14,6 +14,7 @@ summary: Sie können die Pfadeinstellungen des SnapInfo-Verzeichnisses mithilfe 
 [role="lead"]
 Sie können die Pfadeinstellungen für das SnapInfo-Verzeichnis mithilfe des Konfigurationsassistenten oder der Aktion *SnapInfo settings* steuern.
 
+.Über diese Aufgabe
 SnapInfo Verzeichniseinstellungen werden auf der Host-Ebene in SnapManager für Hyper-V angegeben SnapManager für Hyper-V unterstützt NAS-Hosts (SMB) und SAN-Hosts. Bei SAN-Hosts werden die SnapInfo-Einstellungen auf Volume-Ebene angewendet. Bei NAS-Hosts werden die SnapInfo-Einstellungen auf SMB-Share-Level angewendet.
 
 Wenn Sie die IP-Adresse des Speichersystems zu SnapDrive für Windows TPS hinzugefügt haben, werden die Speichereinstellungen von SnapDrive für Windows automatisch ausgefüllt, wenn Sie den Konfigurationsassistenten in SnapManager für Hyper-V. ausführen Wenn SnapDrive für Windows TPS nicht konfiguriert ist, müssen Sie die IP-Adresse des Speichersystems auf der Registerkarte Speicherverbindungen verwalten in SnapManager für Hyper-V angeben

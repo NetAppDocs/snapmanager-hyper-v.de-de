@@ -1182,4 +1182,9 @@
   <block id="9d7345ae7324f5991caf56c819eb5f09" category="sidebar">Wiederherstellung und Wiederherstellung nach einem Disaster Recovery-Failover</block>
   <block id="bc75d43ed20a1ef476a229e08f6582f1" category="sidebar">Das Backup für die folgenden VMs ist fehlgeschlagen, da es nicht online gesichert werden kann oder keine VM zum Backup gefunden werden kann</block>
   <block id="4f9d4ca3184d1887e8be4f7de3aa95bf" category="sidebar">Backup-Fehler mit dem Fehler „Shadow Copy Creation is already in progress“</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">Was Sie benötigen</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Über diese Aufgabe</block>
+  <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">Ergebnisse</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Ergebnis</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Nachdem Sie fertig sind</block>
 </blocks>

@@ -10,6 +10,7 @@ summary: Wiederherstellung aus einem Backup nach Failback
 :imagesdir: ./media/
 
 
+[role="lead"]
 * *Ausgabe*
 +
 Wenn Sie ein Failover und ein Failback durchführen, sind Sie vor dem Failover möglicherweise nicht in der Lage, die VMs an Ihrem primären Standort aus einem Backup wiederherzustellen, das am selben primären Standort erstellt wurde.
